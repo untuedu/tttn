@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<body th:replace="~{fragments/layout :: shell(~{::main})}">
+<main>
+    <section class="panel">
+        <div class="panel-head"><h2>Danh sach co so nuoi trong</h2><a class="btn" href="/co-so/new">Them moi</a></div>
+        <table>
+            <thead><tr><th>Ma</th><th>Dien tich</th><th>Da su dung</th><th>Dia chi</th><th></th></tr></thead>
+            <tbody>
+            <tr th:each="item : ${items}">
+                <td th:text="${item.maCoSoNuoiTrong}"></td>
+                <td th:text="${item.dienTich}"></td>
+                <td th:text="${item.dienTichDaSuDung}"></td>
+                <td th:text="${item.diaChi}"></td>
+                <td class="actions"><a th:href="@{/co-so/{id}/edit(id=${item.maCoSoNuoiTrong})}">Sua</a><form th:action="@{/co-so/{id}/delete(id=${item.maCoSoNuoiTrong})}" method="post"><button>Xoa</button></form></td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+</main>
+</body>
+</html>

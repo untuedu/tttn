@@ -1,0 +1,951 @@
+PARAGRAPHS
+1: HỌC VIỆN CÔNG NGHỆ BƯU CHÍNH VIỄN THÔNG KHOA CÔNG NGHỆ THÔNG TIN 1
+15: BÁO CÁO THỰC TẬP TỐT NGHIỆP ĐẠI HỌC
+16: ĐỀ TÀI: XÂY DỰNG HỆ THỐNG QUẢN LÝ NÔNG NGHIỆP CHO HỢP TÁC XÃ TRÊN NỀN TẢNG WEB CÓ TÍCH HỢP AI SỬ DỤNG CÔNG NGHỆ ASP.NET CORE 6 VÀ SQL SERVER
+20: HỌC VIỆN CÔNG NGHỆ BƯU CHÍNH VIỄN THÔNG	CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
+22: KHOA CÔNG NGHỆ THÔNG TIN 1	Độc lập – Tự do – Hạnh phúc
+23: ĐỀ TÀI BÁO CÁO THỰC TẬP TỐT NGHIỆP ĐẠI HỌC
+27: 1/ Tên đồ án tốt nghiệp: XÂY DỰNG HỆ THỐNG QUẢN LÝ NÔNG NGHIỆP CHO HỢP TÁC XÃ TRÊN NỀN TẢNG WEB CÓ TÍCH HỢP AI SỬ DỤNG CÔNG NGHỆ ASP.NET CORE 6 VÀ SQL SERVER
+28: 2/ Nội dung chính của báo cáo:
+29: Tìm hiểu yêu cầu ứng dụng
+30: Tìm hiểu công nghệ
+31: Phân tích thiết kế ứng dụng - Cài đặt ứng dụng
+32: 3/ Cơ sở dữ liệu ban đầu:
+33: 4/ Ngày giao báo cáo: 19/01/2026
+34: 5/ Ngày nộp báo cáo: 15/03/2026
+37: GIÁO VIÊN HƯỚNG DẪN	SINH VIÊN THỰC HIỆN
+39: (Ký, ghi rõ họ tên)	(Ký, ghi rõ họ tên)
+46: TRƯỞNG KHOA (duyệt)
+47: (Ký, ghi rõ họ tên)
+48: LỜI MỞ ĐẦU
+49: Trong bối cảnh cuộc Cách mạng Công nghiệp 4.0 đang diễn ra mạnh mẽ, chuyển đổi số đã trở thành một xu thế tất yếu, len lỏi vào mọi ngóc ngách của đời sống kinh tế - xã hội, đặc biệt là trong lĩnh vực nông nghiệp. Các Hợp tác xã (HTX) nông nghiệp tại Việt Nam, với vai trò là hạt nhân liên kết sản xuất, đang đứng trước yêu cầu cấp thiết phải hiện đại hóa công tác quản lý để nâng cao hiệu quả hoạt động, đảm bảo tính minh bạch và phát triển bền vững. Việc ứng dụng công nghệ thông tin, đặc biệt là các giải pháp quản lý thông minh và trí tuệ nhân tạo (AI), không chỉ giúp giải quyết những bài toán tồn tại lâu nay trong quản lý sản xuất, vật tư, nhân lực mà còn mở ra những cơ hội mới trong việc hỗ trợ và kết nối với các xã viên.
+50: Xuất phát từ thực tiễn đó, với mong muốn được áp dụng những kiến thức đã học tại Học viện Công nghệ Bưu chính Viễn thông vào giải quyết một vấn đề thực tế, tôi đã lựa chọn đề tài: "Xây dựng Hệ thống Quản lý Nông nghiệp cho Hợp tác xã trên nền tảng Web có tích hợp AI sử dụng công nghệ ASP.NET Core 6 và SQL Server" làm nội dung cho đợt thực tập tốt nghiệp của mình.
+51: Bản báo cáo này là kết quả của quá trình tìm hiểu, nghiên cứu và làm việc nghiêm túc tại Công ty Cổ phần Giải pháp và Dịch vụ Thông tin Việt Nam. Trong thời gian thực tập, tôi đã có cơ hội được tiếp cận với môi trường làm việc chuyên nghiệp, tìm hiểu các quy trình phát triển phần mềm bài bản và trực tiếp xây dựng hệ thống với những công nghệ hiện đại. Hệ thống được xây dựng hướng tới mục tiêu tạo ra một công cụ quản lý tập trung, dễ sử dụng, cho phép ban quản trị HTX theo dõi sát sao các hoạt động canh tác, quản lý kho vật tư, nhật ký sản xuất và bán hàng. Điểm đặc biệt của hệ thống là sự tích hợp chatbot AI, nhằm cung cấp một kênh hỗ trợ kỹ thuật tự động, nhanh chóng cho các xã viên ngay trên nền tảng web.
+52: Tôi xin bày tỏ lòng biết ơn sâu sắc tới Ths. Nguyễn Đình Hiến, giảng viên hướng dẫn, người đã tận tình chỉ bảo, định hướng và đưa ra những góp ý quý báu trong suốt quá trình tôi thực hiện đề tài. Tôi cũng xin chân thành cảm ơn Ban lãnh đạo cùng toàn thể các anh chị đồng nghiệp tại Công ty Cổ phần Giải pháp và Dịch vụ Thông tin Việt Nam đã tạo mọi điều kiện thuận lợi, hỗ trợ và giúp đỡ tôi trong môi trường làm việc thực tế, giúp tôi hoàn thiện cả về chuyên môn lẫn kỹ năng làm việc.
+53: Mặc dù đã có nhiều cố gắng, nhưng do thời gian và kinh nghiệm còn hạn chế, báo cáo không thể tránh khỏi những thiếu sót. Tôi rất mong nhận được sự góp ý của quý thầy cô và các bạn để đề tài được hoàn thiện hơn.
+54: Tôi xin chân thành cảm ơn!
+55: Đề tài này sẽ được thực hiện với các nội dung chính như sau:
+57: CHƯƠNG I: TỔNG QUAN ĐỀ TÀI VÀ CÔNG NGHỆ SỬ DỤNG 
+58: Chương này giới thiệu bối cảnh thực tiễn, mục tiêu và ý nghĩa của việc xây dựng hệ thống quản lý nông nghiệp cho hợp tác xã. Nội dung cũng trình bày các nền tảng công nghệ cốt lõi như ASP.NET Core 6, SQL Server và các thư viện hỗ trợ chatbot AI.
+59: CHƯƠNG II: PHÂN TÍCH HỆ THỐNG 
+60: Chương này tập trung xác định các yêu cầu chức năng, phi chức năng và xây dựng sơ đồ Use Case để mô tả tương tác của người dùng. Đồng thời, chương này phân tích mô hình dữ liệu và kiến trúc tổng thể nhằm đảm bảo tính logic cho hệ thống.
+61: CHƯƠNG III: THIẾT KẾ HỆ THỐNG 
+62: Chương này mô tả chi tiết thiết kế giao diện, kịch bản tương tác và sơ đồ tuần tự cho các chức năng quản lý kho, nhật ký sản xuất và thu hoạch. Ngoài ra, chương cũng đặc tả các lớp thực thể (Entity) và lớp DbContext để chuẩn bị cho việc lập trình cơ sở dữ liệu.
+63: CHƯƠNG IV: CÔNG NGHỆ VÀ CÔNG CỤ SỬ DỤNG 
+64: Chương này làm rõ các công cụ phát triển, hệ quản trị cơ sở dữ liệu và các kỹ thuật lập trình phía Server và Client. Nội dung giúp xác định môi trường kỹ thuật cần thiết để hiện thực hóa các thiết kế đã đề ra.
+65: CHƯƠNG V: CÀI ĐẶT VÀ TRIỂN KHAI 
+66: Chương này hướng dẫn quy trình cài đặt, cấu hình hệ thống và thực hiện các bước kiểm thử phần mềm (Testing). Bên cạnh đó, nội dung cũng đề cập đến phương án triển khai ứng dụng vào môi trường vận hành thực tế.
+67: CHƯƠNG VI & VII: KẾT QUẢ VÀ KẾT LUẬN 
+68: Hai chương này tổng kết các kết quả đạt được, đánh giá mức độ hoàn thiện so với yêu cầu ban đầu và rút ra bài học kinh nghiệm. Cuối cùng, đưa ra kết luận chung và đề xuất các hướng phát triển, nâng cấp hệ thống trong tương lai.
+70: MỤC LỤC
+78: DANH MỤC HÌNH ẢNH
+80: Hình 2.3.  Sơ đồ UseCase	15
+81: Hình 2.4.1. Sơ đồ lớp	20
+82: HÌnh 3.1.1.Giao điện chức năng Đăng nhập	22
+83: Hình 3.1.2.a. Danh sách cơ sở nuôi trồng	22
+84: HÌnh 3.1.2.b. Giao diện theo mới nuôi trồng	23
+85: HÌnh 3.1.2.c. Danh cơ sơ nuôi trồng	23
+86: Hình 3.1.3.a.Giao diện Danh sách kho vật tư	24
+87: Hình 3.1.2.b. Giao diện Thêm mới kho vật tư	24
+88: Hình 3.1.4.a. Giao diện Danh sách nhật ký bán sản phẩm	25
+89: Hình 3.1.3.b. Giao diện Thêm mới nhật ký bán sản phẩm	25
+90: Hình 3.1.5.a. Giao diện Danh sách nhật ký sản xuất	26
+91: Hình 3.1.6.a. Giao diện Danh sách Nhật ký mua sắm	26
+92: Hình 3.1.6.b. Giao diện Thêm mới Nhật ký mua sắm	27
+93: Hình 3.3.1.a. Sơ đồ tuần tự đăng nhập hệ thống	35
+94: Hình 3.3.1.b. Sơ đồ tuần tự luồng thay thế đăng nhập hệ thống	35
+95: Hình 3.3.4. Sơ đồ tuần tự chức năng Thêm mới kho vật tư	38
+96: Hình 3.3.5. Sơ đồ tuần tự chức năng Thêm mới nhật ký bán sản phẩm	39
+97: Hình 3.3.6. Sơ đồ tuần tự chức năng Thêm mới nhật ký mua sắm	40
+98: Hình 3.3.7. Sơ đồ tuần tự chức năng Thêm mới nhật ký thu hoạch	40
+100: 	Chương 1: TỔNG QUAN ĐỀ TÀI
+101: 1.1. Giới thiệu đề tài
+102: 1.1.1. Tên đề tài
+103: “Xây dựng Hệ thống Quản lý Nông nghiệp cho Hợp tác xã trên nền tảng Web có tích hợp AI sử dụng công nghệ ASP.NET Core 6 và SQL Server”.
+104: 1.1.2. Bối cảnh và vấn đề thực tiễn
+105: Trong xu thế chuyển đổi số ngành nông nghiệp, các Hợp tác xã (HTX) tại Việt Nam đang đối mặt với nhiều thách thức trong công tác quản lý và điều hành. Hầu hết các HTX vẫn sử dụng phương pháp thủ công (sổ sách giấy, file Excel rời rạc) để ghi chép và theo dõi thông tin, dẫn đến:
+106: Thiếu tập trung: Dữ liệu về thành viên, diện tích canh tác, lịch sử sản xuất, vật tư nông nghiệp và sản lượng bị phân tán, khó tổng hợp.
+107: Chậm trễ thông tin: Việc cập nhật tình hình sản xuất, báo cáo sâu bệnh hay thông báo kỹ thuật thường diễn ra chậm, làm giảm hiệu quả chỉ đạo sản xuất.
+108: Khó khăn trong phân tích và dự báo: Thiếu công cụ để phân tích số liệu lịch sử, không có khả năng cảnh báo sớm các rủi ro về dịch bệnh hoặc thời tiết dựa trên dữ liệu thực tế.
+109: Hạn chế trong hỗ trợ thành viên: Nông dân thiếu một kênh nhanh chóng, tự động để được giải đáp các thắc mắc kỹ thuật, tra cứu quy trình canh tác ngay lập tức.
+110: 1.1.3. Mục tiêu nghiên cứu
+111: Đề tài được thực hiện nhằm đạt được các mục tiêu cụ thể sau:
+112: Mục tiêu tổng quát: Nghiên cứu, thiết kế và xây dựng một hệ thống quản lý nông nghiệp tập trung trên nền tảng web, được tối ưu cho mô hình HTX, có khả năng tích hợp các tính năng hỗ trợ thông minh (AI) ở mức độ ứng dụng thực tế.
+113: Mục tiêu cụ thể:
+114: Xây dựng hệ thống quản lý tổng thể: Phát triển một hệ thống cho phép quản lý toàn diện thông tin thành viên HTX, thửa ruộng/vùng sản xuất, nhật ký canh tác, vật tư đầu vào, sản lượng thu hoạch và các báo cáo tài chính - kế toán cơ bản.
+115: Tích hợp Chatbot hỗ trợ tự động: Ứng dụng công nghệ xử lý ngôn ngữ tự nhiên (NLP) cơ bản để phát triển một Chatbot (Trợ lý ảo). Chatbot này có nhiệm vụ:
+116: Tự động trả lời các câu hỏi thường gặp của nông dân về quy trình kỹ thuật, cách sử dụng hệ thống.
+117: Hỗ trợ tra cứu thông tin nhanh về lịch sử canh tác, loại giống, loại phân bón đã sử dụng.
+118: Tiếp nhận và phân loại các báo cáo ban đầu về tình hình sâu bệnh từ người dùng.
+119: Phân tích và cảnh báo đơn giản: Phát triển các module phân tích dữ liệu đơn giản, có thể kết hợp dữ liệu nhập vào từ người dùng và cơ sở dữ liệu để đưa ra các cảnh báo cơ bản (ví dụ: gợi ý phòng trừ khi phát hiện triệu chứng sâu bệnh phổ biến được báo cáo trong khu vực).
+120: Triển khai trên nền tảng ổn định: Sử dụng bộ công nghệ ASP.NET Core 6 và SQL Server để đảm bảo hệ thống có hiệu năng cao, bảo mật, dễ dàng bảo trì và mở rộng trong tương lai.
+121: 1.1.4. Phạm vi đề tài
+122: Về chức năng: Đề tài tập trung vào các module quản lý cốt lõi (thành viên, sản xuất, vật tư, báo cáo) và phát triển một Chatbot AI có khả năng tương tác văn bản (Text-based) để hỗ trợ và tra cứu thông tin. Các mô hình AI phức tạp như nhận diện hình ảnh sâu bệnh hay dự báo năng suất chính xác cao nằm ngoài phạm vi của đề tài này.
+123: Về đối tượng sử dụng: Hệ thống được thiết kế cho hai nhóm người dùng chính: Ban quản trị HTX (quản lý, theo dõi, báo cáo) và Các thành viên xã viên (nhập liệu, tra cứu, nhận hỗ trợ).
+124: Về công nghệ: Giới hạn trong việc ứng dụng framework ASP.NET Core 6 (với Razor Pages hoặc MVC) cho backend, SQL Server cho cơ sở dữ liệu, và các thư viện/API hỗ trợ phát triển Chatbot đơn giản.
+125: 1.1.5. Ý nghĩa của đề tài
+126: Về mặt khoa học: Đề tài góp phần vào việc nghiên cứu ứng dụng cụ thể AI (dưới dạng Chatbot và phân tích dữ liệu) vào lĩnh vực nông nghiệp số tại Việt Nam, cung cấp một mô hình tham khảo về tích hợp công nghệ hỗ trợ ra quyết định vào hệ thống quản lý thực tế.
+127: Về mặt thực tiễn:
+128: Đối với HTX: Cung cấp một công cụ quản lý chuyên nghiệp, giúp số hóa mọi hoạt động, nâng cao hiệu quả điều hành, minh bạch thông tin và tiết kiệm thời gian, chi phí quản lý.
+129: Đối với xã viên/nông dân: Cung cấp kênh thông tin và hỗ trợ kỹ thuật nhanh chóng, thuận tiện thông qua Chatbot, giúp hạ thấp rào cản tiếp cận tri thức và công nghệ.
+130: Đối với ngành nông nghiệp: Góp phần thúc đẩy quá trình chuyển đổi số từ cơ sở, xây dựng nền tảng dữ liệu nông nghiệp số tập trung, phục vụ cho các chiến lược phát triển nông nghiệp bền vững và thông minh.
+131: 1.2. Công nghệ sử dụng
+132: Đề tài được phát triển dựa trên một kiến trúc hệ thống hiện đại, kết hợp giữa nền tảng web vững chắc và các công nghệ hỗ trợ thông minh (AI). Các công nghệ được lựa chọn nhằm đảm bảo hiệu năng, khả năng bảo trì, mở rộng và đặc biệt là phù hợp với bài toán thực tế của Hợp tác xã nông nghiệp.
+133: Kiến trúc tổng quan của hệ thống được minh họa qua sơ đồ sau:
+134: 1.2.1. Công nghệ Nền tảng Web & Backend
+135: ASP.NET Core 6: Đây là framework chính để xây dựng backend, xử lý logic nghiệp vụ và cung cấp API. Nó được lựa chọn nhờ hiệu năng vượt trội, kiến trúc module hóa cao, hỗ trợ Dependency Injection mạnh mẽ và hệ sinh thái phong phú, phù hợp để xây dựng hệ thống web hiện đại, an toàn và dễ bảo trì.
+136: SQL Server: Đóng vai trò là hệ quản trị cơ sở dữ liệu quan hệ (RDBMS) chính, dùng để lưu trữ toàn bộ dữ liệu có cấu trúc của hệ thống như thông tin thành viên, thửa ruộng, lịch sử canh tác. Lựa chọn này dựa trên độ ổn định, bảo mật cao và khả năng tương thích tuyệt vời với nền tảng .NET.
+137: Entity Framework Core 6: Là ORM (Object-Relational Mapping) chính, đóng vai trò cầu nối giữa mã ứng dụng C# và cơ sở dữ liệu. Công nghệ này giúp tăng tốc độ phát triển bằng cách cho phép lập trình viên thao tác với dữ liệu thông qua các đối tượng thay vì câu lệnh SQL thủ công, đồng thời hỗ trợ quản lý phiên bản cơ sở dữ liệu tự động (Migration).
+138: Bootstrap 5: Là framework CSS front-end để thiết kế giao diện người dùng. Nó được sử dụng nhằm xây dựng giao diện responsive (thích ứng trên mọi thiết bị) một cách nhanh chóng và chuyên nghiệp, điều đặc biệt quan trọng khi người dùng chủ yếu là nông dân có thể truy cập bằng điện thoại di động.
+139: 1.2.2. Công nghệ AI & Xử lý Ngôn ngữ (Chatbot)
+140: Thư viện NLP (Xử lý Ngôn ngữ Tự nhiên): Các thư viện như spaCy hoặc NLTK được sử dụng để xử lý, phân tích cú pháp và ngữ nghĩa câu hỏi đầu vào bằng tiếng Việt từ nông dân. Đây là nền tảng giúp Chatbot "hiểu" được ý định cơ bản của người dùng.
+141: Mô hình Ngôn ngữ Lớn (LLM) hoặc Kiến trúc RAG: Công nghệ này (có thể triển khai qua API hoặc mô hình cục bộ) được tích hợp để cung cấp kiến thức nền tảng rộng và khả năng tạo phản hồi văn bản tự nhiên, linh hoạt cho Chatbot, vượt ra khỏi giới hạn của các câu trả lời được định sẵn.
+142: Thư viện Computer Vision cơ bản: Các thư viện như OpenCV kết hợp với mô hình học sâu (CNN) được đề xuất để phát triển tính năng phân tích hình ảnh. Điều này cho phép hệ thống hỗ trợ nhận diện sơ bộ các vấn đề như bệnh trên lá cây thông qua ảnh do nông dân tải lên.
+143: 1.2.3. Công nghệ Hỗ trợ & Tích hợp
+144: Docker: Công nghệ container hóa này được sử dụng để đóng gói ứng dụng và các dịch vụ phụ thuộc, đảm bảo môi trường chạy nhất quán từ khâu phát triển đến triển khai, giúp việc mở rộng và quản lý hệ thống trở nên dễ dàng.
+145: RESTful API / gRPC: Đây là giao thức giao tiếp chuẩn được sử dụng để kết nối giữa các thành phần của hệ thống, chẳng hạn như giữa giao diện frontend và backend, hoặc giữa backend với các dịch vụ AI riêng biệt.
+146: JSON Web Tokens (JWT): Là cơ chế được áp dụng để quản lý xác thực (Authentication) và phân quyền (Authorization) một cách an toàn và hiệu quả cho các loại người dùng khác nhau trong hệ thống (Ban quản trị, thành viên HTX).
+147: SignalR: Thư viện .NET này có thể được tích hợp để thêm các chức năng web theo thời gian thực, rất hữu ích cho các tính năng như gửi thông báo tức thời về cảnh báo sâu bệnh hoặc cập nhật bảng điều khiển dữ liệu.
+148: Việc lựa chọn và kết hợp các công nghệ trên tạo thành một nền tảng kỹ thuật vững chắc, có khả năng đáp ứng các yêu cầu chức năng và phi chức năng của hệ thống, đồng thời mở đường cho việc tích hợp và nâng cấp các tính năng thông minh trong tương lai.
+150: Chương 2: PHÂN TÍCH HỆ THỐNG
+151: 2.1. Yêu cầu chức năng
+152: Hệ thống được thiết kế với các nhóm chức năng chính sau, phản ánh đầy đủ quy trình quản lý vận hành của một Hợp tác xã nông nghiệp:
+153: 2.1.1. Nhóm Quản trị Hệ thống & Người dùng
+154: Quản lý xác thực và phân quyền:
+155: Cung cấp chức năng đăng ký, đăng nhập và đăng xuất an toàn.
+156: Phân loại và phân quyền chi tiết cho ba nhóm người dùng chính: Quản trị viên (Admin), Quản lý HTX, và Thành viên HTX.
+157: Quản lý hồ sơ người dùng:
+158: Cho phép mọi người dùng xem và cập nhật thông tin cá nhân của mình.
+159: Cung cấp cho Quản trị viên giao diện để quản lý toàn bộ danh sách người dùng: thêm mới, chỉnh sửa, vô hiệu hóa và phân công vai trò.
+160: 2.1.2. Nhóm Quản lý Danh mục Cốt lõi
+161: Quản lý Khu vực & Cơ sở:
+162: Cho phép thêm, sửa, xóa, xem danh sách các khu vực sản xuất lớn (ví dụ: Cánh đồng A, Khu trồng rau B).
+163: Quản lý chi tiết từng cơ sở nuôi trồng/thửa ruộng con: địa chỉ, diện tích, người phụ trách, và liên kết chúng với một khu vực cụ thể.
+164: Quản lý Vật tư Nông nghiệp:
+165: Quản lý danh mục các loại vật tư (phân bón, thuốc bảo vệ thực vật, hạt giống).
+166: Theo dõi tình trạng tồn kho của từng loại vật tư.
+167: 2.1.3. Nhóm Nghiệp vụ Sản xuất - Kinh doanh
+168: Đây là nhóm chức năng đặc thù, thể hiện rõ nhất nghiệp vụ của một HTX:
+169: Nhật ký Sản xuất: Ghi chép chi tiết từng hoạt động canh tác (gieo trồng, bón phân, phun thuốc, chăm sóc) theo từng cơ sở/khu vực, giúp theo dõi tiến độ và truy xuất nguồn gốc.
+170: Nhật ký Mua sắm: Ghi nhận các giao dịch nhập vật tư vào kho, bao gồm thông tin nhà cung cấp, số lượng, đơn giá.
+171: Nhật ký Thu hoạch: Ghi nhận sản lượng thu hoạch được từ từng khu vực/cơ sở, đánh dấu kết thúc một chu kỳ sản xuất.
+172: Nhật ký Bán sản phẩm: Quản lý các giao dịch bán hàng, giúp theo dõi doanh thu, công nợ và đầu ra của sản phẩm.
+173: 2.1.4. Nhóm Hỗ trợ & Thông minh
+174: Quản lý Hình ảnh: Cung cấp chức năng lưu trữ và quản lý hình ảnh minh chứng cho các hoạt động (tình trạng cây trồng, hoá đơn mua vật tư, sản phẩm thu hoạch).
+175: Tích hợp Trí tuệ Nhân tạo (AI):
+176: Hỗ trợ tự động: Tích hợp AI (như OpenAI) để cung cấp tính năng trả lời tự động các câu hỏi thường gặp về quy trình, kỹ thuật canh tác.
+177: Phân tích sơ bộ: Hỗ trợ phân tích dữ liệu từ các nhật ký để đưa ra cảnh báo hoặc gợi ý đơn giản (ví dụ: cảnh báo lặp lại sâu bệnh theo mùa vụ).
+179: 2.2. Yêu cầu phi chức năng
+180: Bên cạnh các chức năng nghiệp vụ, hệ thống cần đảm bảo các yêu cầu về chất lượng như sau:
+181: Hiệu năng & Khả năng đáp ứng:
+182: Thời gian phản hồi cho các thao tác thông thường (tải trang, tìm kiếm) dưới 3 giây.
+183: Hệ thống phải hỗ trợ nhiều người dùng truy cập đồng thời.
+184: Tính bảo mật:
+185: Mọi thông tin truy cập phải được xác thực.
+186: Dữ liệu nhạy cảm (mật khẩu) phải được mã hóa.
+187: Phân quyền rõ ràng, ngăn chặn truy cập trái phép vào chức năng hoặc dữ liệu.
+188: Tính khả dụng & Thân thiện:
+189: Giao diện trực quan, dễ sử dụng, phù hợp với người dùng có thể không thành thạo công nghệ.
+190: Hệ thống cần hoạt động ổn định, thời gian hoạt động (uptime) đạt trên 99%.
+191: Khả năng mở rộng & Bảo trì:
+192: Kiến trúc hệ thống phải cho phép dễ dàng bổ sung các chức năng mới trong tương lai.
+193: Mã nguồn được cấu trúc rõ ràng, tài liệu hóa đầy đủ để thuận tiện cho việc bảo trì và nâng cấp.
+194: 2.3. Sơ đồ Use Case
+196: Hình 2.3.  Sơ đồ UseCase
+197: Hệ thống có hai tác nhân (Actor) chính với các use case tương ứng như sau:
+198: Tác nhân 1: Người dùng thường
+199: Mô tả: Cán bộ hoặc nhân viên có nhu cầu tra cứu, xem báo cáo.
+200: Use case: Đăng nhập, Xem và quản lý thông tin cá nhân, Xem danh sách cơ sở, Tìm kiếm/Lọc cơ sở, Xem trang thống kê và biểu đồ, Xuất báo cáo.
+201: Tác nhân 2: Quản trị viên
+202: Mô tả: Người có quyền cao nhất, quản lý toàn bộ hệ thống.
+203: Use case: Kế thừa tất cả use case của Người dùng thường. Ngoài ra có thêm: Quản lý (thêm, sửa, xóa, phân quyền) tài khoản người dùng, Toàn quyền thao tác (CRUD) với danh sách cơ sở nuôi trồng.
+204: Luồng sự kiện chính cho một số Use Case quan trọng:
+205: Đăng nhập: Người dùng nhập thông tin → Hệ thống xác thực → Thành công: điều hướng đến trang chủ; Thất bại: hiển thị thông báo lỗi.
+206: Thêm mới cơ sở (Quản trị viên): Quản trị viên truy cập chức năng “Thêm mới” → Nhập đầy đủ thông tin bắt buộc → Hệ thống kiểm tra và lưu vào cơ sở dữ liệu → Thông báo thành công và hiển thị cơ sở vừa thêm vào danh sách.
+207: Xem báo cáo thống kê: Người dùng chọn tiêu chí thống kê (ví dụ: loại hình, địa phương) và khoảng thời gian → Nhấn “Xem báo cáo” → Hệ thống truy vấn cơ sở dữ liệu → Trả về và hiển thị kết quả dưới dạng bảng và biểu đồ tương ứng.
+208: 2.4. Phân tích dữ liệu
+209: 2.4.1. Mô hình dữ liệu chính
+210: Bảng: CoSoNuoiTrong (Cơ sở nuôi trồng)
+211: Quản lý thông tin hạ tầng tổng thể.
+212:  Bảng: NguoiDung (Người dùng)
+213: Lưu trữ thông tin tài khoản và nhân sự.
+215: Bảng: KhuVuc (Khu vực sản xuất)
+216: Quản lý các ao nuôi hoặc lô đất cụ thể.
+218: Bảng: KhoVatTu & LoaiVatTu
+219: Quản lý danh mục và địa điểm lưu trữ.
+220: LoaiVatTu: MaLoai (PK), TenLoai (Phân bón, Thức ăn, Thuốc...).
+221: KhoVatTu: MaKhoVatTu (PK), TenKho (Kho lạnh, Kho khô...).
+223: Bảng: NhatKyMuaSam (Nhập kho vật tư)
+224: Theo dõi biến động vật tư đầu vào.
+226: Bảng: NhatKySanXuat (Nhật ký hằng ngày)
+227: Ghi chép các hoạt động chăm sóc.
+229: Bảng: NhatKyThuHoach (Thu hoạch sản phẩm)
+230: Kết quả của quá trình sản xuất.
+232: Bảng: NhatKyBanSanPham (Đầu ra thương mại)
+233: Quản lý doanh thu và truy xuất nguồn gốc.
+235: Tóm tắt các ràng buộc (Constraints)
+236: Khóa ngoại (FK): Đều được thiết lập ON DELETE CASCADE. Điều này có nghĩa là nếu bạn xóa một Người dùng, tất cả Khu vực do người đó quản lý hoặc Nhật ký mua sắm của người đó cũng sẽ bị xóa tự động để tránh rác dữ liệu.
+237: Giá trị mặc định: Các trường như TenKho, SanPham, TenVatTu được mặc định là chuỗi rỗng (N'') thay vì NULL để tránh lỗi khi lập trình code-behind.
+239: Hình 2.4.1. Sơ đồ lớp
+240: 2.4.2. Quan hệ giữa các thực thể
+241: KhoVatTu 1---n NhatKySanXuat
+242: KhoVatTu 1---n NhatKyMuaSam
+243: NhatKyMuaSam n---1 LoaiVatTu
+244: NhatKyMuaSam n---1 NguoiDung
+245: NhatKySanXuat n---1 KhuVuc 
+246: 2.5. Kiến trúc hệ thống
+247: Frontend (Presentation Layer): ASP.NET Core Razor Pages kết hợp Bootstrap 5 để xây dựng giao diện responsive. Chart.js hoặc một thư viện .NET chart phù hợp dùng để vẽ biểu đồ.
+248: Backend (Application Layer): ASP.NET Core 6 xử lý logic nghiệp vụ, sử dụng Entity Framework Core 6 làm ORM để giao tiếp với cơ sở dữ liệu.
+249: AI Service Layer (Tùy chọn): Có thể được triển khai như một dịch vụ riêng biệt (Microservice) bằng Python (với thư viện như FastAPI, transformers) hoặc tích hợp trực tiếp trong .NET bằng ML.NET. Dịch vụ này chịu trách nhiệm xử lý NLP cho Chatbot và phân tích hình ảnh.
+250: Database Layer: Microsoft SQL Server lưu trữ dữ liệu có cấu trúc của hệ thống.
+251: Authentication & Authorization: Sử dụng ASP.NET Core Identity để quản lý xác thực người dùng và phân quyền dựa trên vai trò (Role-based).
+252: 2.6. Sơ đồ tổng thể hệ thống
+253: Người dùng (Admin, Ban quản trị, Xã viên) truy cập hệ thống qua trình duyệt web. Yêu cầu được gửi đến ASP.NET Core Web Server. Các yêu cầu về nghiệp vụ quản lý (CRUD) được xử lý trực tiếp bởi server, sử dụng Entity Framework Core để truy vấn/ghi dữ liệu vào SQL Server. Các yêu cầu liên quan đến AI (câu hỏi Chatbot, phân tích ảnh) được chuyển tiếp đến AI Engine Service (giao tiếp qua RESTful API hoặc gRPC). AI Engine xử lý và trả kết quả về Backend, sau đó Backend tổng hợp và trả về giao diện người dùng để hiển thị. Toàn bộ hệ thống có thể được đóng gói và triển khai linh hoạt nhờ Docker.
+255: Chương 3: THIẾT KẾ HỆ THỐNG
+256: 3.1. Thiết kế giao diện
+257: Dưới đây là mô tả chi tiết các màn hình chính của hệ thống, được thiết kế với nguyên lý ưu tiên di động (Mobile-first) và tập trung vào trải nghiệm của các xã viên HTX.
+258: 3.1.1. Giao diện chức năng Đăng nhập
+260: HÌnh 3.1.1.Giao điện chức năng Đăng nhập
+261: 3.1.2. Giao diện chức năng “Quản lý cơ sở nuôi trồng”
+264: Hình 3.1.2.a. Danh sách cơ sở nuôi trồng
+267: HÌnh 3.1.2.b. Giao diện theo mới nuôi trồng
+270: HÌnh 3.1.2.c. Danh cơ sơ nuôi trồng
+274: 3.1.3. Giao diện chức năng “Quản lý kho vật tư”
+276: Hình 3.1.3.a.Giao diện Danh sách kho vật tư
+279: Hình 3.1.2.b. Giao diện Thêm mới kho vật tư
+281: 3.1.4. Giao diện chức năng “Nhật ký bán sản phẩm”
+283: Hình 3.1.4.a. Giao diện Danh sách nhật ký bán sản phẩm
+287: Hình 3.1.3.b. Giao diện Thêm mới nhật ký bán sản phẩm
+289: 3.1.5. Giao diện chức năng  “Quản lý Nhật ký sản xuất”
+291: Hình 3.1.5.a. Giao diện Danh sách nhật ký sản xuất
+292: 3.1.6. Giao diện chức năng “Nhật ký mua sắm”
+
+293: Hình 3.1.6.a. Giao diện Danh sách Nhật ký mua sắm
+296: Hình 3.1.6.b. Giao diện Thêm mới Nhật ký mua sắm
+297: 3.2. Kịch bản Tương tác Chính
+298: 3.2.1. Kịch bản chức năng Đăng nhập hệ thống
+299: Mã số: UC-001 Tên Use Case: Đăng nhập (Login) Tác nhân: Tất cả người dùng (Khách, Thành viên, Quản trị viên) Mô tả: Cho phép người dùng truy cập vào hệ thống bằng tài khoản đã đăng ký để sử dụng các chức năng tương ứng với quyền hạn.
+300: Tiền điều kiện (Pre-conditions):
+301: Người dùng chưa đăng nhập.
+302: Người dùng đã có tài khoản (nếu chưa có thì phải qua Use Case Đăng ký).
+303: Hậu điều kiện (Post-conditions):
+304: Người dùng được xác thực và cấp quyền truy cập (Session được khởi tạo).
+305: Hệ thống chuyển hướng người dùng đến trang chủ phù hợp (Admin Dashboard hoặc Trang chủ Thành viên).
+306: Luồng sự kiện chính (Basic Flow):
+307: Người dùng truy cập vào trang đăng nhập của hệ thống.
+308: Người dùng nhập thông tin tài khoản (email hoặc tên đăng nhập) và mật khẩu.
+309: Người dùng nhấn nút "Đăng nhập".
+310: Hệ thống kiểm tra tính hợp lệ của dữ liệu đầu vào (định dạng email, độ dài mật khẩu...).
+311: Hệ thống xác thực thông tin đăng nhập với cơ sở dữ liệu.
+312: Hệ thống xác nhận thông tin hợp lệ:
+313: Lưu thông tin người dùng vào Session.
+314: Hiển thị thông báo "Đăng nhập thành công".
+315: Hệ thống điều hướng người dùng đến trang chủ phù hợp với vai trò.
+316: Luồng thay thế / Ngoại lệ (Alternative Flows):
+317: Tại bước 4 (Dữ liệu không hợp lệ): Người dùng bỏ trống tên đăng nhập hoặc mật khẩu.
+318: Hệ thống hiển thị thông báo: "Vui lòng nhập đầy đủ thông tin".
+319: Luồng quay lại Bước 2.
+320: Tại bước 5 (Sai thông tin xác thực): Hệ thống không tìm thấy tài khoản hoặc mật khẩu không khớp.
+321: Hệ thống hiển thị thông báo lỗi: "Tên đăng nhập hoặc mật khẩu không chính xác!".
+322: Hệ thống giữ nguyên trang đăng nhập và xóa trống trường mật khẩu.
+323: Luồng quay lại Bước 2.
+324: 3.2.2. Kịch bản chức năng: Thêm mới cơ sở nuôi trồng
+325: Mã số: UC-002 Tên Use Case: Thêm mới cơ sở nuôi trồng Tác nhân: Quản trị viên (Admin) Mô tả: Cho phép quản trị viên khai báo và thêm một cơ sở nuôi trồng mới vào hệ thống quản lý.
+326: Tiền điều kiện (Pre-conditions):
+327: Quản trị viên đã đăng nhập thành công vào hệ thống.
+328: Hậu điều kiện (Post-conditions):
+329: Thông tin cơ sở nuôi trồng mới được lưu vào cơ sở dữ liệu.
+330: Danh sách cơ sở nuôi trồng được cập nhật thêm bản ghi mới.
+331: Luồng sự kiện chính (Basic Flow):
+332: Quản trị viên truy cập chức năng "Quản lý cơ sở nuôi trồng" và chọn "Thêm mới".
+333: Hệ thống hiển thị biểu mẫu (form) thêm mới.
+334: Quản trị viên nhập các thông tin (Tên cơ sở, Địa chỉ, Loại hình, Người phụ trách...).
+335: Quản trị viên nhấn nút "Lưu" (hoặc "Thêm mới").
+336: Hệ thống kiểm tra tính hợp lệ của dữ liệu (các trường bắt buộc, định dạng dữ liệu, kiểm tra trùng lặp tên cơ sở).
+337: Hệ thống xác nhận dữ liệu hợp lệ:
+338: Lưu thông tin vào cơ sở dữ liệu.
+339: Hiển thị thông báo "Thêm cơ sở thành công!".
+340: Hệ thống hiển thị lại danh sách cơ sở nuôi trồng (bao gồm cơ sở vừa thêm).
+341: Luồng thay thế / Ngoại lệ (Alternative Flows):
+342: Tại bước 5 (Dữ liệu thiếu hoặc sai định dạng):
+343: Hệ thống phát hiện trường bắt buộc bị bỏ trống hoặc sai định dạng.
+344: Hệ thống hiển thị thông báo lỗi chi tiết tại trường tương ứng (ví dụ: " Không được bỏ trống! ").
+345: Luồng quay lại Bước 3.
+346: Tại bước 5 (Tên cơ sở đã tồn tại):
+347: Hệ thống kiểm tra thấy Địa chỉ cơ sở nuôi trồng đã có trong Database.
+348: Hệ thống thông báo: " Thêm mới cơ sở nuôi trồng thất bại!".
+349: Luồng quay lại Bước 3.
+350: 3.2.3. Kịch bản chức năng: Xem báo cáo thống kê
+351: Mã số: UC-003 Tên Use Case: Xem báo cáo thống kê Tác nhân: Quản trị viên, Thành viên (được cấp quyền) Mô tả: Cho phép người dùng xem các số liệu thống kê về sản xuất, thu hoạch theo các tiêu chí và khoảng thời gian tùy chọn.
+352: Tiền điều kiện (Pre-conditions):
+353: Người dùng đã đăng nhập và có quyền xem báo cáo.
+354: Hệ thống đã có dữ liệu về sản xuất/thu hoạch.
+355: Hậu điều kiện (Post-conditions):
+356: Biểu đồ và bảng số liệu được hiển thị đúng theo tiêu chí lọc.
+357: Luồng sự kiện chính (Basic Flow):
+358: Người dùng truy cập chức năng "Báo cáo thống kê" trên menu.
+359: Hệ thống hiển thị giao diện bộ lọc thống kê.
+360: Người dùng chọn tiêu chí thống kê (Loại hình, Địa phương, Trạng thái...).
+361: Người dùng chọn khoảng thời gian (Từ ngày - Đến ngày).
+362: Người dùng nhấn nút "Xem báo cáo".
+363: Hệ thống kiểm tra hợp lệ dữ liệu đầu vào (Ngày bắt đầu phải nhỏ hơn hoặc bằng Ngày kết thúc).
+364: Hệ thống truy vấn dữ liệu từ Database theo tiêu chí.
+365: Hệ thống hiển thị kết quả:
+366: Dữ liệu chi tiết dưới dạng bảng (Table).
+367: Dữ liệu tổng quan dưới dạng biểu đồ trực quan (Chart).
+368: Người dùng xem kết quả. (Nếu muốn xem cái khác, người dùng thay đổi tiêu chí và quay lại bước 5).
+369: Luồng thay thế / Ngoại lệ (Alternative Flows):
+370: Tại bước 6 (Khoảng thời gian không hợp lệ):
+371: Người dùng chọn "Ngày kết thúc" trước "Ngày bắt đầu".
+372: Hệ thống thông báo lỗi: "Thời gian kết thúc phải lớn hơn thời gian bắt đầu".
+373: Luồng quay lại Bước 4.
+374: Tại bước 7 (Không có dữ liệu):
+375: Hệ thống truy vấn nhưng không tìm thấy bản ghi nào khớp với tiêu chí.
+376: Hệ thống hiển thị thông báo: "Không có dữ liệu phù hợp với tiêu chí tìm kiếm".
+377: Hệ thống hiển thị bảng rỗng và biểu đồ rỗng.
+378: Kịch bản Tư vấn qua Chatbot: Xã viên nhập "Lúa nhà tôi bị vàng lá, có đốm nâu" → Chatbot phân tích, trả lời ngay: "Có thể lúa bị bệnh đạo ôn. Bạn có thể tải lên ảnh lá lúa để phân tích chính xác hơn không?" → Người dùng tải ảnh lên → Chatbot xử lý ảnh và đưa ra khuyến nghị: "Khả năng cao là bệnh đạo ôn cổ lá. Đề xuất sử dụng thuốc X với liều lượng Y. Lưu ý: Tham khảo ý kiến cán bộ kỹ thuật trước khi sử dụng."
+379: Kịch bản Xem Báo cáo của Ban quản trị: Ban quản trị chọn "Báo cáo hiệu quả vụ lúa Đông Xuân 2024", chọn "Nhóm xã viên A" → Hệ thống gửi yêu cầu đến API → API truy vấn CSDL và tính toán → Trả về dữ liệu → Frontend vẽ biểu đồ so sánh năng suất trung bình và biểu đồ đường về chi phí vật tư theo thời gian.
+380: 3.2.4. Kịch bản chức năng: Thêm mới kho vật tư
+381: Mã số: UC-004 Tên Use Case: Thêm mới vật Tác nhân: Quản trị viên (Admin) Mô tả: Cho phép quản trị viên khai báo và thêm một cơ sở nuôi trồng mới vào hệ thống quản lý.
+382: Tiền điều kiện (Pre-conditions):
+383: Quản trị viên đã đăng nhập thành công vào hệ thống.
+384: Hậu điều kiện (Post-conditions):
+385: Thông tin cơ sở nuôi trồng mới được lưu vào cơ sở dữ liệu.
+386: Danh sách cơ sở nuôi trồng được cập nhật thêm bản ghi mới.
+387: Luồng sự kiện chính (Basic Flow):
+388: Quản trị viên truy cập chức năng "Quản lý kho vật tư" và chọn "Thêm mới".
+389: Hệ thống hiển thị biểu mẫu (form) thêm mới.
+390: Quản trị viên nhập các thông tin (Tên vật tư...).
+391: Quản trị viên nhấn nút "Lưu" (hoặc "Thêm mới").
+392: Hệ thống kiểm tra tính hợp lệ của dữ liệu (các trường bắt buộc, định dạng dữ liệu, kiểm tra trùng lặp tên cơ sở).
+393: Hệ thống xác nhận dữ liệu hợp lệ:
+394: Lưu thông tin vào cơ sở dữ liệu.
+395: Hiển thị thông báo "Thêm vật tư thành công!".
+396: Hệ thống hiển thị lại danh sách vật tư (bao gồm vật tư vừa thêm).
+397: Luồng thay thế / Ngoại lệ (Alternative Flows):
+398: Tại bước 5 (Dữ liệu thiếu hoặc sai định dạng):
+399: Hệ thống phát hiện trường bắt buộc bị bỏ trống hoặc sai định dạng.
+400: Hệ thống hiển thị thông báo lỗi chi tiết tại trường tương ứng (ví dụ: " Không được bỏ trống! ").
+401: Luồng quay lại Bước 3.
+402: Tại bước 5 (Tên cơ sở đã tồn tại):
+403: Hệ thống kiểm tra thấy Tên kho vật tư đã có trong Database.
+404: Hệ thống thông báo: " Kho vật tư đã tồn tại!".
+405: Luồng quay lại Bước 3.
+406: 3.2.5. Kịch bản chức năng: Thêm mới cơ sở nuôi trồng
+407: Mã số: UC-005 Tên Use Case: Thêm mới nhật nhật ký bán sản phẩm Tác nhân: Quản trị viên (Admin) Mô tả: Cho phép quản trị viên khai báo và thêm một nhật ký bán sản phẩm mới vào hệ thống quản lý.
+408: Tiền điều kiện (Pre-conditions):
+409: Quản trị viên đã đăng nhập thành công vào hệ thống.
+410: Hậu điều kiện (Post-conditions):
+411: Thông tin cơ sở nuôi trồng mới được lưu vào cơ sở dữ liệu.
+412: Danh sách cơ sở nuôi trồng được cập nhật thêm bản ghi mới.
+413: Luồng sự kiện chính (Basic Flow):
+414: Quản trị viên truy cập chức năng "Nhật ký bán sản phẩm" và chọn "Thêm mới".
+415: Hệ thống hiển thị biểu mẫu (form) thêm mới.
+416: Quản trị viên nhập các thông tin (Nhật ký thu hoạch, số lượng sản phẩm, giá sản phẩm...).
+417: Quản trị viên nhấn nút "Lưu" (hoặc "Thêm mới").
+418: Hệ thống kiểm tra tính hợp lệ của dữ liệu (các trường bắt buộc, định dạng dữ liệu, kiểm tra trùng lặp tên cơ sở).
+419: Hệ thống xác nhận dữ liệu hợp lệ:
+420: Lưu thông tin vào cơ sở dữ liệu.
+421: Hiển thị thông báo "Thêm cơ sở thành công!".
+422: Hệ thống hiển thị lại danh sách sản phẩm bán (bao gồm sản phẩm vừa thêm).
+423: Luồng thay thế / Ngoại lệ (Alternative Flows):
+424: Tại bước 5 (Dữ liệu thiếu hoặc sai định dạng):
+425: Hệ thống phát hiện trường bắt buộc bị bỏ trống hoặc sai định dạng.
+426: Hệ thống hiển thị thông báo lỗi chi tiết tại trường tương ứng (ví dụ: " Không được bỏ trống! ").
+427: Luồng quay lại Bước 3.
+428: Tại bước 5 (Tên số lượng sản phẩm bán lớn hơn số lượng sản phẩm kho):
+429: Hệ thống kiểm tra thấy Địa chỉ cơ sở nuôi trồng đã có trong Database.
+430: Hệ thống thông báo: " Thêm mới thất bại, do số lượng bán lớn hơn số lượng trong kho!".
+431: Luồng quay lại Bước 3.
+432: 3.2.6. Kịch bản chức năng: Thêm mới nhật ký mua sắm
+433: Mã số: UC-006 Tên Use Case: Thêm mới nhật nhật ký mua sắm Tác nhân: Quản trị viên (Admin) Mô tả: Cho phép quản trị viên khai báo và thêm một nhật ký mua sắm mới vào hệ thống quản lý.
+434: Tiền điều kiện (Pre-conditions):
+435: Quản trị viên đã đăng nhập thành công vào hệ thống.
+436: Hậu điều kiện (Post-conditions):
+437: Thông tin nhật ký mua sắm mới được lưu vào cơ sở dữ liệu.
+438: Danh sách cơ sở nuôi trồng được cập nhật thêm bản ghi mới.
+439: Luồng sự kiện chính (Basic Flow):
+440: Quản trị viên truy cập chức năng "Nhật ký mua sắm" và chọn "Thêm mới".
+441: Hệ thống hiển thị biểu mẫu (form) thêm mới.
+442: Quản trị viên nhập các thông tin (Loại vật tư, kho lưu trữ, tên vật tư, số lượng, giá, xuất xứ, ngày sản xuất, hạn sử dụng,...).
+443: Quản trị viên nhấn nút "Lưu" (hoặc "Thêm mới").
+444: Hệ thống kiểm tra tính hợp lệ của dữ liệu (các trường bắt buộc, định dạng dữ liệu, kiểm tra trùng lặp tên cơ sở).
+445: Hệ thống xác nhận dữ liệu hợp lệ:
+446: Lưu thông tin vào cơ sở dữ liệu.
+447: Hiển thị thông báo "Thêm nhật ký thành công!".
+448: Hệ thống hiển thị lại danh sách sản phẩm bán (bao gồm sản phẩm vừa thêm).
+449: Luồng thay thế / Ngoại lệ (Alternative Flows):
+450: Tại bước 5 (Dữ liệu thiếu hoặc sai định dạng):
+451: Hệ thống phát hiện trường bắt buộc bị bỏ trống hoặc sai định dạng.
+452: Hệ thống hiển thị thông báo lỗi chi tiết tại trường tương ứng (ví dụ: " Không được bỏ trống! ").
+453: Luồng quay lại Bước 3.
+454: 3.2.7. Kich bản chức năng: Thêm mới nhật ký sản xuất
+455: Mã số: UC-007 Tên Use Case: Thêm mới nhật ký sản xuất Tác nhân: Quản trị viên (Admin) Mô tả: Cho phép quản trị viên khai báo và thêm một cơ sở nuôi trồng mới vào hệ thống quản lý.
+456: Tiền điều kiện (Pre-conditions):
+457: Quản trị viên đã đăng nhập thành công vào hệ thống.
+458: Hậu điều kiện (Post-conditions):
+459: Thông tin nhật ký sản xuất mới được lưu vào cơ sở dữ liệu.
+460: Danh sách nhật ký sản xuất được cập nhật thêm bản ghi mới.
+461: Luồng sự kiện chính (Basic Flow):
+462: Quản trị viên truy cập chức năng "Nhật ký sản xuất" và chọn "Thêm mới".
+463: Hệ thống hiển thị biểu mẫu (form) thêm mới.
+464: Quản trị viên nhập các thông tin (khu vực, kho lưu trữ, tên vật tư, số lượng...).
+465: Quản trị viên nhấn nút "Lưu" (hoặc "Thêm mới").
+466: Hệ thống kiểm tra tính hợp lệ của dữ liệu (các trường bắt buộc, định dạng dữ liệu, kiểm tra trùng lặp tên cơ sở).
+467: Hệ thống xác nhận dữ liệu hợp lệ:
+468: Lưu thông tin vào cơ sở dữ liệu.
+469: Hiển thị thông báo "Thêm nhật ký sản xuất thành công!".
+470: Hệ thống hiển thị lại danh sách cơ sở nuôi trồng (bao gồm cơ sở vừa thêm).
+471: Luồng thay thế / Ngoại lệ (Alternative Flows):
+472: Tại bước 5 (Dữ liệu thiếu hoặc sai định dạng):
+473: Hệ thống phát hiện trường bắt buộc bị bỏ trống hoặc sai định dạng.
+474: Hệ thống hiển thị thông báo lỗi chi tiết tại trường tương ứng (ví dụ: " Không được bỏ trống! ").
+475: Luồng quay lại Bước 3.
+476: Tại bước 5 (Số lượng sản phẩm thêm nhỏ lớn hơn số lượng còn hạn):
+477: Hệ thống kiểm tra thấy Địa chỉ cơ sở nuôi trồng đã có trong Database.
+478: Hệ thống thông báo: " Thêm mới thất bại!".
+479: Luồng quay lại Bước 3.
+480: 3.2.8. Kịch bản chức năng: Thêm mới nhật ký thu hoạch
+481: Mã số: UC-008 Tên Use Case: Thêm mới nhật ký thu hoạch Tác nhân: Quản trị viên (Admin) Mô tả: Cho phép quản trị viên khai báo và thêm một cơ sở nuôi trồng mới vào hệ thống quản lý.
+482: Tiền điều kiện (Pre-conditions):
+483: Quản trị viên đã đăng nhập thành công vào hệ thống.
+484: Hậu điều kiện (Post-conditions):
+485: Thông tin nhật ký sản xuất mới được lưu vào cơ sở dữ liệu.
+486: Danh sách nhật ký thu hoạch được cập nhật thêm bản ghi mới.
+487: Luồng sự kiện chính (Basic Flow):
+488: Quản trị viên truy cập chức năng "Nhật ký thu hoạch" và chọn "Thêm mới".
+489: Hệ thống hiển thị biểu mẫu (form) thêm mới.
+490: Quản trị viên nhập các thông tin (khu vực, số lượng thu hoạch, ngày thu hoạch...).
+491: Quản trị viên nhấn nút "Lưu" (hoặc "Thêm mới").
+492: Hệ thống kiểm tra tính hợp lệ của dữ liệu (các trường bắt buộc, định dạng dữ liệu, kiểm tra trùng lặp tên cơ sở).
+493: Hệ thống xác nhận dữ liệu hợp lệ:
+494: Lưu thông tin vào cơ sở dữ liệu.
+495: Hiển thị thông báo "Thêm nhật ký thu hoạch thành công!".
+496: Hệ thống hiển thị lại danh sách nhật ký thu hoạch (bao gồm nhật ký vừa thêm).
+497: Luồng thay thế / Ngoại lệ (Alternative Flows):
+498: Tại bước 5 (Dữ liệu thiếu hoặc sai định dạng):
+499: Hệ thống phát hiện trường bắt buộc bị bỏ trống hoặc sai định dạng.
+500: Hệ thống hiển thị thông báo lỗi chi tiết tại trường tương ứng (ví dụ: " Không được bỏ trống! ").
+501: Luồng quay lại Bước 3.
+502: Tại bước 5 (ngày thu hoạch lớn hơn ngày hiện tại):
+503: Hệ thống kiểm tra thấy Địa chỉ cơ sở nuôi trồng đã có trong Database.
+504: Hệ thống thông báo: " Thêm mới thất bại!".
+505: Luồng quay lại Bước 3.
+506: 3.3. Sơ đồ tuần tự
+507: 3.2.1. Đăng nhập hệ thống.
+509: Hình 3.3.1.a. Sơ đồ tuần tự đăng nhập hệ thống
+510: Luồng thay thế (Dữ liệu không hợp lệ):
+512: Hình 3.3.1.b. Sơ đồ tuần tự luồng thay thế đăng nhập hệ thống
+513: 3.3.2. Thêm mới cơ sở nuôi trồng
+515: Hình 3.3.2.a. Sơ đồ tuần tự chức năng Thêm mới cơ sở nuôi trồng
+528: Luồng thay thế (Dữ liệu không hợp lệ):
+530: Hình 3.3.2.b. Sơ đồ tuần tự Luồng thay thế Chức năng Thêm mới cơ sở nuôi trồng
+532: 3.2.3. Xem báo cáo thống kê
+534: Hình 3.3.3. Sơ đồ tuần tự Chức năng Báo cáo thông kê
+535: 3.3.4. Thêm mới kho vật tư
+537: Hình 3.3.4. Sơ đồ tuần tự chức năng Thêm mới kho vật tư
+539: 3.3.5. Thêm mới nhật ký bán sản phẩm
+541: Hình 3.3.5. Sơ đồ tuần tự chức năng Thêm mới nhật ký bán sản phẩm
+542: 3.3.6. Thêm mới nhật ký mua sắm
+544: Hình 3.3.6. Sơ đồ tuần tự chức năng Thêm mới nhật ký mua sắm
+545: 3.3.7. Thêm mới nhật ký thu hoạch
+547: Hình 3.3.7. Sơ đồ tuần tự chức năng Thêm mới nhật ký thu hoạch
+548: 3.4. Thiết kế Mô hình Dữ liệu (Lớp Thực thể)
+549: Hệ thống sử dụng Code-First Approach với Entity Framework Core. Dưới đây là các lớp thực thể (Entity Classes) chính.
+550: 3.4.1. Đặc tả chi tiết các lớp
+551: [Table("KhoVatTu")]
+552: public class KhoVatTu
+553: {
+554:     [Key]
+555:     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+556:     public int MaKhoVatTu { get; set; }
+558:     [Required]
+559:     public string? TenKho { get; set; }
+561:     public ICollection<NhatKySanXuat>? NhatKySanXuats { get; set; }
+562:     public ICollection<NhatKyMuaSam>? NhatKyVatTus { get; set; }
+563: }
+564: [Table("NhatKyMuaSam")]
+565: public class NhatKyMuaSam
+566: {
+567:     [Key]
+568:     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+569:     public int MaNhatKyMuaSam { get; set; }
+571:     [Required]
+572:     public string? TenVatTu { get; set; }
+574:     [Required]
+575:     public string? XuatXu { get; set; }
+577:     [Required]
+578:     public int SoLuong { get; set; }
+580:     public int SoLuongDaSuDung { get; set; }
+582:     [Required]
+583:     public double Gia { get; set; }
+585:     [Required]
+586:     public DateTime NgayMua { get; set; }
+588:     [Required]
+589:     public DateTime NgaySanXuat { get; set; }
+591:     [Required]
+592:     public DateTime HanSuDung { get; set; }
+594:     [ForeignKey("LoaiVatTu")]
+595:     public int MaLoaiVatTu { get; set; }
+596:     public virtual LoaiVatTu? LoaiVatTu { get; set; }
+598:     [ForeignKey("KhoVatTu")]
+599:     public int MaKhoVatTu { get; set; }
+600:     public virtual KhoVatTu? KhoVatTu { get; set; }
+602:     [ForeignKey("NguoiDung")]
+603:     public int MaNguoiDung { get; set; }
+604:     public virtual NguoiDung? NguoiDung { get; set; }
+606:     public string? TrangThai { get; set; }
+607: }
+608: [Table("NhatKySanXuat")]
+609: public class NhatKySanXuat
+610: {
+611:     [Key]
+612:     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+613:     public int MaNhatKySanXuat { get; set; }
+615:     [Required]
+616:     public string? TenVatTu { get; set; }
+618:     [Required]
+619:     public int SoLuongSuDung { get; set; }
+621:     [Required]
+622:     public DateTime NgaySuDung { get; set; }
+624:     [ForeignKey("KhoVatTu")]
+625:     public int MaKhoVatTu { get; set; }
+626:     public virtual KhoVatTu? KhoVatTu { get; set; }
+628:     [ForeignKey("KhuVuc")]
+629:     public int MaKhuVuc { get; set; }
+630:     public virtual KhuVuc? KhuVuc { get; set; }
+631: }
+632: // Lớp quan trọng: Lưu trữ mọi hoạt động canh tác
+633: public class CultivationLog : BaseEntity
+634: {
+635:     [Required, MaxLength(50)]
+636:     public string ActivityType { get; set; } // "Gieo sạ", "Bón lót", "Phun thuốc", "Thu hoạch"
+637:     public DateTime ActivityDate { get; set; }
+638:     [MaxLength(200)]
+639:     public string MaterialName { get; set; } // Tên giống/phân/thuốc
+640:     public decimal? QuantityUsed { get; set; } // Số lượng
+641:     [MaxLength(20)]
+642:     public string Unit { get; set; } // "kg", "lít", "bao"
+643:     public string Notes { get; set; } // Ghi chú tự do
+644:     public string? ImageUrl { get; set; } // Đường dẫn ảnh minh họa (nếu có)
+646:     // Khóa ngoại đến thửa ruộng
+647:     public int FarmPlotId { get; set; }
+648:     public virtual FarmPlot FarmPlot { get; set; }
+649: }
+651: public class KhoVatTuRequest
+652: {
+653:     [Required(ErrorMessage = "Không được bỏ trống !")]
+654:     public string? TenKho { get; set; }
+655: }
+656: // Lớp lưu trữ cơ sở kiến thức dùng để huấn luyện/RAG cho Chatbot
+657: public class KnowledgeArticle : BaseEntity
+658: {
+659:     [Required, MaxLength(300)]
+660:     public string Title { get; set; } // Tiêu đề bài viết
+661:     [Required]
+662:     public string Content { get; set; } // Nội dung chi tiết
+663:     [MaxLength(100)]
+664:     public string Category { get; set; } // "Kỹ thuật trồng lúa", "Phòng trừ sâu bệnh", "Chính sách HTX"
+665:     public string[] Tags { get; set; } // Các từ khóa để tìm kiếm, dùng JSON/Array trong DB
+666:     public bool IsActive { get; set; } = true;
+667: }
+668: [Table("KhuVuc")]
+669: public class KhuVuc {
+670:     [Key]
+671:     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+672:     public int MaKhuVuc { get; set; }
+673:     [Required]
+674:     public string? TenKhuVuc { get; set; }
+675:     [Required]
+676:     public double DienTich { get; set; }
+677:     [Required]
+678:     public string? SanPham { get; set; }
+679:     public string? HinhAnhSanPham { get; set; }
+680:     [Required]
+681:     public DateTime ThoiGianTao { get; set; }
+682:     [ForeignKey("NguoiDung")]
+683:     public int MaNguoiDung { get; set; }
+684:     public virtual NguoiDung? NguoiDung { get; set; }
+685:     public ICollection<NhatKyThuHoach>? NhatKyThuHoachs { get; set; }
+686:     public ICollection<NhatKySanXuat>? NhatKySanXuats { get; set; }
+687: }
+688: [Table("NguoiDung")]
+689: public class NguoiDung {
+690:     [Key]
+691:     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+692:     public int MaNguoiDung { get; set; }
+693:     [Required]
+694:     public string? TenNguoiDung { get; set; }
+695:     public GioiTinh GioiTinh { get; set; }
+696:     [Required]
+697:     [EmailAddress]
+698:     public string? Email { get; set; }
+699:     public string? SDT { get; set; }
+700:     public DateTime? NgaySinh { get; set; }
+701:     [Required]
+702:     public string? MatKhau { get; set; }
+703:     public Roles Roles { get; set; }
+704:     public string? HinhAnh { get; set; }
+705:     [ForeignKey("CoSoNuoiTrong")]
+706:     public int MaCoSoNuoiTrong { get; set; }
+707:     public virtual CoSoNuoiTrong? CoSoNuoiTrong { get; set; }
+708:     public ICollection<KhuVuc>? KhuVucs { get; set; }
+709:     public ICollection<NhatKyMuaSam>? NhatKyMuaSams { get; set; }
+710: }
+711: [Table("NhatKyBanSanPham")]
+712: public class NhatKyBanSanPham {
+713:     [Key]
+714:     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+715:     public int MaNhatKyBanSanPham { get; set; }
+716:     [Required]
+717:     public int SoLuong { get; set; }
+718:     [Required]
+719:     public double GiaBan { get; set; }
+720:     [Required]
+721:     public DateTime NgayBan { get; set; }
+722:     public string? QRCode { get; set; }
+723:     [ForeignKey("NhatKyThuHoach")]
+724:     public int MaNhatKyThuHoach { get; set; }
+725:     public virtual NhatKyThuHoach? NhatKyThuHoach { get; set; }
+726: }
+727: [Table("NhatKyThuHoach")]
+728: public class NhatKyThuHoach {
+729:     [Key]
+730:     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+731:     public int MaNhatKyThuHoach { get; set; }
+732:     [Required]
+733:     public int SoLuongThuHoach { get; set; }
+734:     public int SoLuongDaBan { get; set; }
+735:     [Required]
+736:     public DateTime NgayThuHoach { get; set; }
+737:     [ForeignKey("KhuVuc")]
+738:     public int MaKhuVuc { get; set; }
+739:     public virtual KhuVuc? KhuVuc { get; set; }
+740:     public ICollection<NhatKyBanSanPham>? NhatKyBanSanPhams { get; set; }
+741: }
+742: 3.4.2. Lớp DbContext (FarmManagementDbContext)
+743: using Microsoft.EntityFrameworkCore;
+744: using DATN.Models;
+746: namespace DATN.Models
+747: {
+748:     public class MasterDbContext : DbContext
+749:     {
+750:         public MasterDbContext(DbContextOptions<MasterDbContext> options) : base(options) { }
+751:         public MasterDbContext() { }
+752:         public DbSet<KhoVatTu> KhoVatTus { get; set; }
+753:         public DbSet<CoSoNuoiTrong> CoSoNuoiTrongs { get; set; }
+754:         public DbSet<KhuVuc> KhuVucs { get; set; }
+755:         public DbSet<LoaiVatTu> LoaiVatTus { get; set; }
+756:         public DbSet<NguoiDung> NguoiDungs { get; set; }
+757:         public DbSet<NhatKyBanSanPham> NhatKyBanSanPhams { get; set; }
+758:         public DbSet<NhatKyMuaSam> NhatKyMuaSams { get; set; }
+759:         public DbSet<NhatKySanXuat> NhatKySanXuats { get; set; }
+760:         public DbSet<NhatKyThuHoach> NhatKyThuHoaches { get; set; }
+762:         protected override void OnConfiguring(DbContextOptionsBuilder optionBuilder)
+763:         {
+764:             optionBuilder.UseSqlServer("Data Source=.;initial catalog=DATN2026;Integrated Security=True;");
+765:         }
+766:         protected override void OnModelCreating(ModelBuilder modelBuilder)
+767:         {
+768:             modelBuilder.Entity<LoaiVatTu>().HasData(
+769:                 new LoaiVatTu
+770:                 {
+771:                     MaLoai = 1,
+772:                     TenLoai = "Vật phẩm tiêu hao"
+773:                 },
+774:                 new LoaiVatTu
+775:                 {
+776:                     MaLoai = 2,
+777:                     TenLoai = "Vật tư không tiêu hao"
+778:                 }
+779:             );
+780:             modelBuilder.Entity<CoSoNuoiTrong>().HasData(
+781:                 new CoSoNuoiTrong
+782:                 {
+783:                     MaCoSoNuoiTrong = 1,
+784:                     DienTich = 1800,
+785:                     DiaChi = "Đội 1, xã Vật Lại, Hà Nội"
+786:                 },
+787:                 new CoSoNuoiTrong
+788:                 {
+789:                     MaCoSoNuoiTrong = 2,
+790:                     DienTich = 2600,
+791:                     DiaChi = "Đội 2, xã Vật Lại, Hà Nội"
+792:                 },
+793:                 new CoSoNuoiTrong
+794:                 {
+795:                     MaCoSoNuoiTrong = 3,
+796:                     DienTich = 3000,
+797:                     DiaChi = "Đội 3, xã Vật Lại, Hà Nội"
+798:                 },
+799:                 new CoSoNuoiTrong
+800:                 {
+801:                     MaCoSoNuoiTrong = 4,
+802:                     DienTich = 2500,
+803:                     DiaChi = "Đội 4, xã Vật Lại, Hà Nội"
+804:                 },
+805:                 new CoSoNuoiTrong
+806:                 {
+807:                     MaCoSoNuoiTrong = 5,
+808:                     DienTich = 1000,
+809:                     DiaChi = "Đội 5, xã Vật Lại, Hà Nội"
+810:                 }
+811:             );
+812:         }
+813:     }
+814: }
+816: CHƯƠNG 4. CÔNG NGHỆ VÀ CÔNG CỤ SỬ DỤNG
+817: Chương này trình bày chi tiết về các công nghệ, ngôn ngữ lập trình, thư viện và công cụ hỗ trợ được sử dụng để xây dựng và phát triển hệ thống.
+818: 4.1. Công nghệ phía Server (Backend)
+819: Hệ thống được xây dựng dựa trên nền tảng công nghệ của Microsoft với các thành phần chính sau:
+820: Nền tảng phát triển (Platform): .NET 6 - Phiên bản ổn định (LTS), hỗ trợ đa nền tảng và hiệu năng cao.
+821: Ngôn ngữ lập trình: C# 10 - Ngôn ngữ hướng đối tượng mạnh mẽ, cú pháp hiện đại.
+822: Kiến trúc Web: ASP.NET Core Razor Pages.
+823: Lưu ý: Hệ thống sử dụng mô hình Razor Pages (Page-based) để tổ chức code, tập trung vào từng trang cụ thể thay vì mô hình MVC (Model-View-Controller) hay Blazor.
+824: Truy xuất dữ liệu (ORM): Entity Framework Core. Đây là công cụ ánh xạ quan hệ đối tượng giúp thao tác với cơ sở dữ liệu thông qua các đối tượng C# thay vì viết câu lệnh SQL thủ công.
+825: Ánh xạ đối tượng (Object Mapping): AutoMapper. Thư viện dùng để tự động chuyển đổi dữ liệu giữa các lớp thực thể (Entity Models) và các lớp chuyển giao dữ liệu (DTO - Data Transfer Objects).
+826: Quản lý phiên làm việc: Session. Sử dụng Session để lưu trữ và quản lý trạng thái đăng nhập của người dùng trong suốt quá trình sử dụng hệ thống.
+827: 4.2. Công nghệ phía Giao diện (Frontend)
+828: Giao diện người dùng được thiết kế hướng tới sự đơn giản, tương thích với nhiều thiết bị (Responsive) thông qua sự kết hợp của các công nghệ:
+829: Razor Pages (.cshtml): Công nghệ render giao diện động từ phía server, cho phép nhúng mã C# trực tiếp vào HTML để xử lý logic hiển thị.
+830: Bootstrap: Thư viện CSS Framework giúp xây dựng layout và các thành phần giao diện (UI components) chuẩn, tương thích với thiết bị di động.
+831: Đường dẫn tham chiếu: ~/lib/bootstrap/dist/css/bootstrap.css
+832: FontAwesome: Bộ thư viện biểu tượng (icon) vector, giúp giao diện trực quan hơn.
+833: Đường dẫn tham chiếu: ~/css/fontawesome-all.min.css
+834: Chart.js: Thư viện JavaScript mã nguồn mở dùng để vẽ các biểu đồ trực quan (biểu đồ cột, tròn, đường) phục vụ cho các báo cáo thống kê.
+835: Đường dẫn tham chiếu: ~/vendor/chart.js/Chart.min.js, Chart.bundle.js, Chart.js
+836: 4.3. Hệ quản trị Cơ sở dữ liệu (Database)
+837: Hệ quản trị: SQL Server.
+838: Cơ chế kết nối: Hệ thống kết nối tới SQL Server thông qua Entity Framework Core. Chuỗi kết nối (Connection String) được cấu hình trong file appsettings.json và được khởi tạo thông qua lớp MasterDbContext.cs.
+839: Quản lý cấu trúc (Schema Management): Sử dụng kỹ thuật Migrations của EF Core để theo dõi và cập nhật các thay đổi trong cấu trúc cơ sở dữ liệu đồng bộ với mã nguồn (Code-First).
+840: 4.4. Các kỹ thuật lập trình khác
+841: IConfiguration: Kỹ thuật Dependency Injection để đọc các cấu hình hệ thống từ file appsettings.json (ví dụ: chuỗi kết nối, cấu hình mail, cấu hình phân trang).
+842: DataAnnotations: Sử dụng các Attribute để thực hiện kiểm tra tính hợp lệ của dữ liệu đầu vào (Validation) ngay tại phía Server (ví dụ: [Required], [StringLength], [EmailAddress]).
+843: LINQ (Language Integrated Query): Ngôn ngữ truy vấn tích hợp dùng để truy xuất, lọc và xử lý dữ liệu từ các bộ sưu tập (Collections) hoặc cơ sở dữ liệu một cách ngắn gọn và hiệu quả.
+844: 4.5. Môi trường và công cụ phát triển
+845: Môi trường phát triển tích hợp (IDE): Visual Studio 2022. Hỗ trợ viết mã, gợi ý code (IntelliSense), gỡ lỗi (Debug) và quản lý dự án.
+846: Quản lý gói (Package Manager): NuGet. Công cụ dùng để cài đặt và quản lý các thư viện bên thứ ba (như AutoMapper, Chart.js...).
+847: Cơ chế lưu trữ tạm: Sử dụng kết hợp Session và Cookie để duy trì trạng thái xác thực và trải nghiệm người dùng liền mạch giữa các trang.
+849: Chương 5: CÀI ĐẶT VÀ TRIỂN KHAI
+850: 5.1. Yêu cầu hệ thống
+851: Hệ điều hành: Windows 10/11, hoặc Linux/Mac có hỗ trợ .NET 6
+852: .NET SDK: .NET 6 trở lên
+853: IDE: Visual Studio 2022 (khuyến nghị), hoặc Visual Studio Code
+854: Cơ sở dữ liệu: SQL Server (Express hoặc bản đầy đủ)
+855: Trình duyệt: Chrome, Edge, Firefox, Safari
+856: Các phần mềm bổ trợ:
+857: Node.js (nếu cần quản lý frontend package)
+858: Các công cụ quản lý package như NuGet
+859: 5.2. Cài đặt
+860: Cài đặt SQL Server
+861: Đảm bảo SQL Server đã được cài đặt và có thể truy cập.
+862: Tạo cơ sở dữ liệu
+863: Sửa chuỗi kết nối trong appsettings.json cho phù hợp với môi trường.
+864: Chạy migration để tạo bảng:
+865:      dotnet ef database update
+Các bước xây dựng chatbot
+866: Bước 1: Chuẩn bị dữ liệu
+867: Thu thập các câu hỏi thường gặp (FAQ) và tài liệu liên quan đến hợp tác xã.
+868: Lưu dữ liệu vào file như htx_faq.md.
+869: Bước 2: Xây dựng kho dữ liệu
+870: Sử dụng các thuật toán truy xuất thông tin (vector search, FAISS) để tạo index cho dữ liệu.
+871: Lưu index vào file như index.faiss.
+872: Bước 3: Tích hợp mô hình LLM
+873: Sử dụng mô hình Gemma hoặc các LLM khác để sinh câu trả lời dựa trên dữ liệu truy xuất.
+874: Bước 4: Xây dựng API
+875: Sử dụng FastAPI để xây dựng các endpoint như /chat để nhận câu hỏi và trả về câu trả lời.
+876: Thêm CORS để hỗ trợ truy cập từ nhiều nguồn.
+877: Bước 5: Triển khai và kiểm thử
+878: Chạy API bằng lệnh:
+879: uvicorn api:app --reload --host 0.0.0.0 --port 8000
+880: Kiểm thử bằng cách gửi request tới endpoint /chat với nội dung câu hỏi.
+881: Hướng dẫn sử dụng API
+882: Khởi động API
+883: Đảm bảo đã cài đặt các thư viện cần thiết:
+884: pip install -r requirements.txt
+885: Chạy server:
+886: uvicorn api:app --reload --host 0.0.0.0 --port 8001
+887: Gửi câu hỏi tới chatbot
+888: Gửi POST request tới endpoint /chat với nội dung:
+889: {
+890:   "message": "Câu hỏi của bạn",
+891:   "history": [],
+892:   "top_k": 4
+893: }
+895: Nhận về kết quả trả lời, các đoạn văn bản liên quan và độ chính xác.
+896:  Tích hợp vào website hoặc ứng dụng
+897: Sử dụng AJAX hoặc fetch API để gửi request tới server FastAPI.
+898: Hiển thị kết quả trả lời cho người dùng.
+899: 5.3. Cấu hình
+900: Cấu hình chuỗi kết nối
+Mở file appsettings.json và chỉnh sửa:
+901:   "ConnectionStrings": {
+902:     "DefaultConnection": "Server=.;Database=TenCSDL;Trusted_Connection=True;"
+903:   }
+904: 5.4. Testing
+905: Kiểm tra khởi động ứng dụng
+906: Nhấn F5 hoặc Debug > Start Debugging trong Visual Studio.
+907: Đảm bảo ứng dụng chạy và truy cập được qua trình duyệt.
+908: Kiểm thử chức năng
+909: Đăng ký, đăng nhập, thêm/sửa/xóa các thực thể (người dùng, kho, khu vực, nhật ký...).
+910: Kiểm tra các báo cáo, xuất file Excel, biểu đồ.
+911: Kiểm thử giao diện
+912: Đảm bảo các trang Razor Pages hiển thị đúng, responsive với Bootstrap.
+913: Kiểm thử bảo mật
+914: Đăng nhập với các vai trò khác nhau, kiểm tra phân quyền.
+915: 5.5. Deployment
+916: Build project
+917: Build > Build Solution trong Visual Studio.
+918: Hoặc dùng lệnh:
+919: dotnet publish -c Release -o ./publish
+921: Triển khai lên IIS
+922: Cài đặt IIS trên máy chủ.
+923: Tạo website mới, trỏ đến thư mục publish.
+924: Cấu hình Application Pool sử dụng .NET 6.
+925: Triển khai lên hosting/cloud
+926: Có thể deploy lên Azure App Service, Docker, hoặc các dịch vụ cloud khác.
+927: Đảm bảo cấu hình chuỗi kết nối và các thông số môi trường phù hợp.
+928: Kiểm tra sau triển khai
+929: Truy cập website, kiểm tra các chức năng chính.
+930: Kiểm tra log, xử lý lỗi nếu có.
+931: Chương 6. KẾT QUẢ VÀ ĐÁNH GIÁ
+932: 6.1. Kết quả đạt được
+933: Xây dựng thành công hệ thống quản lý nuôi trồng thủy sản trên nền tảng ASP.NET Core Razor Pages, đáp ứng các nghiệp vụ chính:
+934: Quản lý người dùng, phân quyền (admin, user).
+935: Quản lý kho vật tư, nhật ký mua sắm, nhật ký sử dụng vật tư.
+936: Quản lý khu vực nuôi trồng, nhật ký thu hoạch, nhật ký bán sản phẩm.
+937: Báo cáo thống kê: tổng khu vực, tổng chi phí, doanh số, vật tư hết hạn.
+938: Tích hợp xuất báo cáo Excel, biểu đồ trực quan (Chart.js).
+939: Tích hợp mã QR cho sản phẩm (QRCoder).
+940: Giao diện hiện đại, responsive sử dụng Bootstrap, FontAwesome.
+941: Bảo mật: Sử dụng session, xác thực đăng nhập, phân quyền truy cập.
+942: Cơ sở dữ liệu: Thiết kế chuẩn hóa, sử dụng Entity Framework Core, hỗ trợ migration và mở rộng.
+943: 6.2. Đánh giá
+944: Ưu điểm:
+945: Ứng dụng đáp ứng đầy đủ các chức năng quản lý, thao tác nhanh, giao diện thân thiện.
+946: Dễ dàng mở rộng, bảo trì nhờ kiến trúc phân lớp (Controller, Service, DTO, Model).
+947: Tích hợp các thư viện mã nguồn mở mạnh mẽ (QRCoder, Chart.js, AutoMapper).
+948: Hỗ trợ xuất báo cáo, thống kê trực quan, giúp người dùng dễ dàng theo dõi hoạt động.
+949: Nhược điểm:
+950: Một số chức năng nâng cao (như thông báo real-time, mobile app) chưa được triển khai.
+951: Chưa tích hợp xác thực đa yếu tố (MFA), bảo mật nâng cao.
+952: Hiệu năng có thể cần tối ưu thêm khi dữ liệu lớn.
+953: 6.3. So sánh với yêu cầu ban đầu
+954: Đáp ứng:
+955: Đã hoàn thành các yêu cầu về quản lý người dùng, kho vật tư, khu vực, nhật ký sản xuất, bán hàng, báo cáo.
+956: Giao diện và trải nghiệm người dùng đạt yêu cầu.
+957: Vượt mong đợi:
+958: Tích hợp thêm mã QR cho sản phẩm, xuất báo cáo Excel, biểu đồ thống kê.
+959: Chưa đạt:
+960: Một số tính năng nâng cao, bảo mật nâng cao, tích hợp mobile/web API chưa thực hiện do giới hạn thời gian.
+962: Chương 7. KẾT LUẬN
+963: 7.1. Tổng kết
+964: Project đã xây dựng thành công hệ thống quản lý nuôi trồng, vật tư, sản xuất và bán hàng trên nền tảng .NET 6 Razor Pages.
+965: Hệ thống đáp ứng tốt các nghiệp vụ quản lý, hỗ trợ người dùng thao tác thuận tiện, hiệu quả.
+966: 7.2. Bài học kinh nghiệm
+967: Hiểu rõ quy trình phát triển phần mềm theo mô hình phân lớp, tách biệt logic nghiệp vụ và giao diện.
+968: Kỹ năng sử dụng các công nghệ hiện đại: .NET 6, Entity Framework Core, AutoMapper, Bootstrap, Chart.js, QRCoder.
+969: Tầm quan trọng của việc kiểm thử, bảo mật, và tối ưu hiệu năng cho ứng dụng thực tế.
+970: 7.3. Hướng phát triển
+971: Bổ sung các tính năng nâng cao: thông báo real-time, xác thực đa yếu tố, phân tích dữ liệu nâng cao.
+972: Phát triển mobile app hoặc API cho ứng dụng di động.
+973: Tối ưu hiệu năng và mở rộng quy mô hệ thống cho nhiều cơ sở nuôi trồng lớn.
+974: Tích hợp AI cho dự báo sản lượng, tối ưu hóa quy trình sản xuất.
+975: 7.4. Kết luận
+976: Hệ thống đã hoàn thành mục tiêu đề ra, sẵn sàng triển khai thực tế.
+977: Dự án là nền tảng vững chắc để tiếp tục phát triển, mở rộng và ứng dụng vào thực tiễn quản lý nuôi trồng hiện đại.
+978: TÀI LIỆU THAM KHẢO
+979: Microsoft SQL Server Developer Documentation: https://learn.microsoft.com/en-us/sql/
+980: "Microservices in .NET Core" - Christian Horsdal.
+981: FastAPI Documentation:
+982: https://fastapi.tiangolo.com/
+983: “Deep Learning for Natural Language” -ProcessingJason Brownlee
+984: "Natural Language Processing in Action" Hobson Lane, Cole Howard, Hannes Max Hapke
+
+TABLES 9
+
+TABLE 1 rows 6
+Giảng viên | : Ths. Nguyễn Đình Hiến
+Sinh viên thực hiện | : Nguyễn An Tân
+Mã sinh viên | : K22DTCN024
+Lớp | : D22TXCN01-K
+Khóa | : 22
+Hệ | : Từ xa
+
+TABLE 2 rows 4
+Họ và tên: Nguyễn An Tân | Mã SV: K22DTCN024
+Lớp: D22TXCN01-K | Khóa: 2022
+Ngành đào tạo: Công nghệ thông tin | Hệ đào tạo: Đại học từ xa
+Email: tanna26395@gmail.com | Số điện thoại: 086614314
+
+TABLE 3 rows 5
+Tên trường | Kiểu dữ liệu | Mô tả
+MaCoSoNuoiTrong | int (PK) | Mã định danh duy nhất của cơ sở (Tự tăng).
+DienTich | float | Tổng diện tích đất/mặt nước của cơ sở.
+DienTichDaSuDung | float | Diện tích thực tế đã triển khai các khu vực nuôi trồng.
+DiaChi | nvarchar(max) | Địa chỉ chi tiết của cơ sở.
+
+TABLE 4 rows 11
+Tên trường | Kiểu dữ liệu | Mô tả
+MaNguoiDung | int (PK) | Mã định danh người dùng (Tự tăng).
+TenNguoiDung | nvarchar(max) | Họ và tên người dùng.
+GioiTinh | int | Giới tính (Quy ước: 0-Nữ, 1-Nam, v.v.).
+Email | nvarchar(max) | Địa chỉ email (Dùng để đăng nhập/liên lạc).
+SDT | nvarchar(max) | Số điện thoại liên hệ.
+NgaySinh | datetime2 | Ngày tháng năm sinh.
+MatKhau | nvarchar(max) | Mật khẩu đã mã hóa.
+Roles | int | Phân quyền (Admin, Quản lý, Nhân viên).
+HinhAnh | nvarchar(max) | Đường dẫn ảnh đại diện.
+MaCoSoNuoiTrong | int (FK) | Liên kết với cơ sở mà người này làm việc.
+
+TABLE 5 rows 8
+Tên trường | Kiểu dữ liệu | Mô tả
+MaKhuVuc | int (PK) | Mã định danh khu vực (Tự tăng).
+TenKhuVuc | nvarchar(max) | Tên khu vực (VD: Ao số 1, Lô A).
+DienTich | float | Diện tích riêng của khu vực này.
+MaNguoiDung | int (FK) | Mã người chịu trách nhiệm quản lý khu vực.
+SanPham | nvarchar(max) | Tên loại cây trồng/vật nuôi đang triển khai.
+HinhAnhSanPham | nvarchar(max) | Hình ảnh minh họa sản phẩm thực tế.
+ThoiGianTao | datetime2 | Thời điểm khởi tạo khu vực trên hệ thống.
+
+TABLE 6 rows 14
+Tên trường | Kiểu dữ liệu | Mô tả
+MaNhatKyMuaSam | int (PK) | Mã giao dịch nhập hàng.
+TenVatTu | nvarchar(max) | Tên loại vật tư mua về.
+XuatXu | nvarchar(max) | Nguồn gốc, xuất xứ hàng hóa.
+SoLuong | int | Số lượng nhập vào.
+Gia | float | Đơn giá mua.
+NgayMua | datetime2 | Ngày mua hàng.
+NgaySanXuat | datetime2 | NSX của vật tư.
+HanSuDung | datetime2 | HSD của vật tư (Rất quan trọng trong nông nghiệp).
+MaLoaiVatTu | int (FK) | Thuộc nhóm vật tư nào.
+MaKhoVatTu | int (FK) | Lưu trữ tại kho nào.
+MaNguoiDung | int (FK) | Người thực hiện mua sắm/nhập kho.
+SoLuongDaSuDung | int | Số lượng đã lấy ra dùng (để tính tồn kho).
+TrangThai | nvarchar(max) | Ghi chú trạng thái (Còn hàng, hết hàng, sắp hết hạn).
+
+TABLE 7 rows 7
+Tên trường | Kiểu dữ liệu | Mô tả
+MaNhatKySanXuat | int (PK) | Mã nhật ký.
+TenVatTu | nvarchar(max) | Tên vật tư đem đi sử dụng (phân, thuốc...).
+SoLuongSuDung | int | Lượng vật tư đã tiêu thụ.
+NgaySuDung | datetime2 | Thời điểm thực hiện.
+MaKhoVatTu | int (FK) | Xuất từ kho nào.
+MaKhuVuc | int (FK) | Sử dụng cho khu vực nào.
+
+TABLE 8 rows 6
+Tên trường | Kiểu dữ liệu | Mô tả
+MaNhatKyThuHoach | int (PK) | Mã đợt thu hoạch.
+MaKhuVuc | int (FK) | Thu hoạch từ khu vực nào.
+SoLuongThuHoach | int | Tổng sản lượng thu được (Kg, Tấn, v.v.).
+NgayThuHoach | datetime2 | Ngày thực hiện thu hoạch.
+SoLuongDaBan | int | Số lượng đã xuất bán (trích từ tổng thu hoạch).
+
+TABLE 9 rows 7
+Tên trường | Kiểu dữ liệu | Mô tả
+MaNhatKyBanSanPham | int (PK) | Mã hóa đơn bán hàng.
+MaNhatKyThuHoach | int (FK) | Liên kết tới đợt thu hoạch để biết nguồn gốc.
+SoLuong | int | Số lượng bán thực tế.
+GiaBan | float | Giá bán trên một đơn vị.
+NgayBan | datetime2 | Ngày giao dịch.
+QRCode | nvarchar(max) | Chuỗi dữ liệu để tạo mã QR phục vụ truy xuất.

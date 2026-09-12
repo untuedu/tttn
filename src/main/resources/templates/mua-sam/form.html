@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<body th:replace="~{fragments/layout :: shell(~{::main})}">
+<main><section class="panel form-panel"><div class="panel-head"><h2 th:text="${title}">Form</h2></div>
+    <form method="post" action="/mua-sam" th:object="${item}" class="entity-form two-col">
+        <label>Ten vat tu</label><input th:field="*{tenVatTu}" required>
+        <label>Xuat xu</label><input th:field="*{xuatXu}">
+        <label>So luong</label><input type="number" th:field="*{soLuong}" required>
+        <label>Gia</label><input type="number" step="1000" th:field="*{gia}" required>
+        <label>Ngay mua</label><input type="date" th:field="*{ngayMua}">
+        <label>Ngay san xuat</label><input type="date" th:field="*{ngaySanXuat}">
+        <label>Han su dung</label><input type="date" th:field="*{hanSuDung}">
+        <label>Trang thai</label><input th:field="*{trangThai}">
+        <label>Loai vat tu</label><select name="loaiId" required><option th:each="l:${loais}" th:value="${l.maLoai}" th:text="${l.tenLoai}"></option></select>
+        <label>Kho vat tu</label><select name="khoId" required><option th:each="k:${khos}" th:value="${k.maKhoVatTu}" th:text="${k.tenKho}"></option></select>
+        <label>Nguoi mua</label><select name="nguoiDungId" required><option th:each="u:${nguoiDungs}" th:value="${u.maNguoiDung}" th:text="${u.tenNguoiDung}"></option></select>
+        <div class="form-actions full"><a href="/mua-sam">Quay lai</a><button type="submit">Luu</button></div>
+    </form>
+</section></main>
+</body>
+</html>

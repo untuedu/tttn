@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<body th:replace="~{fragments/layout :: shell(~{::main})}">
+<main><section class="panel form-panel"><div class="panel-head"><h2 th:text="${title}">Form</h2></div>
+    <p class="error" th:if="${error}" th:text="${error}"></p>
+    <form method="post" action="/ban-san-pham" th:object="${item}" class="entity-form">
+        <label>Dot thu hoach</label><select name="thuHoachId" required><option th:each="th:${thuHoachs}" th:value="${th.maNhatKyThuHoach}" th:text="${'Dot #' + th.maNhatKyThuHoach + ' - ' + th.soLuongThuHoach + ' kg'}"></option></select>
+        <label>So luong ban</label><input type="number" th:field="*{soLuong}" required>
+        <label>Gia ban</label><input type="number" step="1000" th:field="*{giaBan}" required>
+        <label>Ngay ban</label><input type="date" th:field="*{ngayBan}">
+        <div class="form-actions"><a href="/ban-san-pham">Quay lai</a><button type="submit">Luu</button></div>
+    </form>
+</section></main>
+</body>
+</html>

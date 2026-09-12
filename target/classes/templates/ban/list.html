@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org">
+<body th:replace="~{fragments/layout :: shell(~{::main})}">
+<main><section class="panel"><div class="panel-head"><h2>Danh sach nhat ky ban san pham</h2><a class="btn" href="/ban-san-pham/new">Them moi</a></div>
+    <table><thead><tr><th>Thu hoach</th><th>So luong</th><th>Gia ban</th><th>Ngay ban</th><th>QR</th><th></th></tr></thead>
+        <tbody><tr th:each="item:${items}"><td th:text="${item.nhatKyThuHoach != null ? item.nhatKyThuHoach.maNhatKyThuHoach : ''}"></td><td th:text="${item.soLuong}"></td><td th:text="${#numbers.formatDecimal(item.giaBan,0,'COMMA',0,'POINT')}"></td><td th:text="${item.ngayBan}"></td><td><img class="qr-code" th:src="@{/ban-san-pham/{id}/qr.png(id=${item.maNhatKyBanSanPham})}" th:alt="${'QR ' + item.qrCode}"/><span class="qr-label" th:text="${item.qrCode}"></span></td><td class="actions"><form th:action="@{/ban-san-pham/{id}/delete(id=${item.maNhatKyBanSanPham})}" method="post"><button>Xoa</button></form></td></tr></tbody>
+    </table>
+</section></main>
+</body>
+</html>
