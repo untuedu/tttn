@@ -30,7 +30,7 @@ public class NhatKyMuaSam {
     private LocalDate ngaySanXuat = LocalDate.now();
     private LocalDate hanSuDung = LocalDate.now().plusMonths(6);
     private int soLuongDaSuDung;
-    private String trangThai = "Con hang";
+    private String trangThai = "Còn hàng";
 
     @ManyToOne
     private LoaiVatTu loaiVatTu;

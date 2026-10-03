@@ -8,6 +8,7 @@
         <form method="post" action="/kho-vat-tu" th:object="${item}" class="entity-form">
             <input type="hidden" th:field="*{maKhoVatTu}">
             <label>Tên kho</label><input th:field="*{tenKho}" required>
+            <label>Ghi chú</label><input th:field="*{ghiChu}">
             <div class="form-actions"><a href="/kho-vat-tu">Quay lại</a><button type="submit">Lưu</button></div>
         </form>
     </section>
