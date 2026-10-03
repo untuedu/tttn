@@ -46,8 +46,8 @@ public class DataSeeder implements CommandLineRunner {
         coSoRepo.save(cs2);
         coSoRepo.save(cs3);
 
-        KhoVatTu khoChinh = khoRepo.save(kho("Kho vật tư chính"));
-        KhoVatTu khoKho = khoRepo.save(kho("Kho khô"));
+        KhoVatTu khoChinh = khoRepo.save(kho("Kho vật tư chính", "Phân bón, thuốc BVTV"));
+        KhoVatTu khoKho = khoRepo.save(kho("Kho khô", "Vật tư không tiêu hao"));
 
         LoaiVatTu tieuHao = loaiRepo.save(loai("Vật phẩm tiêu hao"));
         LoaiVatTu khongTieuHao = loaiRepo.save(loai("Vật tư không tiêu hao"));
@@ -105,9 +105,10 @@ public class DataSeeder implements CommandLineRunner {
         return item;
     }
 
-    private KhoVatTu kho(String ten) {
+    private KhoVatTu kho(String ten, String ghiChu) {
         KhoVatTu item = new KhoVatTu();
         item.setTenKho(ten);
+        item.setGhiChu(ghiChu);
         return item;
     }
 

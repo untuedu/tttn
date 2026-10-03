@@ -15,8 +15,12 @@ public class KhoVatTu {
     @NotBlank(message = "Ten kho khong duoc bo trong")
     private String tenKho = "";
 
+    private String ghiChu = "";
+
     public Integer getMaKhoVatTu() { return maKhoVatTu; }
     public void setMaKhoVatTu(Integer maKhoVatTu) { this.maKhoVatTu = maKhoVatTu; }
     public String getTenKho() { return tenKho; }
     public void setTenKho(String tenKho) { this.tenKho = tenKho; }
+    public String getGhiChu() { return ghiChu; }
+    public void setGhiChu(String ghiChu) { this.ghiChu = ghiChu; }
 }
