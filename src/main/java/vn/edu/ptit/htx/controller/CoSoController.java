@@ -18,7 +18,7 @@ public class CoSoController {
     @GetMapping
     public String list(Model model) {
         model.addAttribute("items", repo.findAll());
-        model.addAttribute("title", "Danh sach co so nuoi trong");
+        model.addAttribute("title", "Danh sách cơ sở nuôi trồng");
         model.addAttribute("active", "co-so");
         return "co-so/list";
     }
@@ -26,7 +26,7 @@ public class CoSoController {
     @GetMapping("/new")
     public String create(Model model) {
         model.addAttribute("item", new CoSoNuoiTrong());
-        model.addAttribute("title", "Them moi co so nuoi trong");
+        model.addAttribute("title", "Thêm mới cơ sở nuôi trồng");
         model.addAttribute("active", "co-so");
         return "co-so/form";
     }
@@ -34,7 +34,7 @@ public class CoSoController {
     @GetMapping("/{id}/edit")
     public String edit(@PathVariable Integer id, Model model) {
         model.addAttribute("item", repo.findById(id).orElseThrow());
-        model.addAttribute("title", "Cap nhat co so nuoi trong");
+        model.addAttribute("title", "Cập nhật cơ sở nuôi trồng");
         model.addAttribute("active", "co-so");
         return "co-so/form";
     }
@@ -44,8 +44,8 @@ public class CoSoController {
         boolean duplicated = item.getMaCoSoNuoiTrong() == null && repo.existsByDiaChiIgnoreCase(item.getDiaChi());
         if (duplicated) {
             model.addAttribute("item", item);
-            model.addAttribute("error", "Dia chi co so nuoi trong da ton tai");
-            model.addAttribute("title", "Them moi co so nuoi trong");
+            model.addAttribute("error", "Địa chỉ cơ sở nuôi trồng đã tồn tại");
+            model.addAttribute("title", "Thêm mới cơ sở nuôi trồng");
             model.addAttribute("active", "co-so");
             return "co-so/form";
         }

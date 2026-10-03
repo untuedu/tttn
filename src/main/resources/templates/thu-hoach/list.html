@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="vi" xmlns:th="http://www.thymeleaf.org">
 <body th:replace="~{fragments/layout :: shell(~{::main})}">
-<main><section class="panel"><div class="panel-head"><h2>Danh sach nhat ky thu hoach</h2><a class="btn" href="/thu-hoach/new">Them moi</a></div>
-    <table><thead><tr><th>Ma</th><th>Khu vuc</th><th>So luong</th><th>Da ban</th><th>Ngay</th><th></th></tr></thead>
-        <tbody><tr th:each="item:${items}"><td th:text="${item.maNhatKyThuHoach}"></td><td th:text="${item.khuVuc != null ? item.khuVuc.tenKhuVuc : ''}"></td><td th:text="${item.soLuongThuHoach}"></td><td th:text="${item.soLuongDaBan}"></td><td th:text="${item.ngayThuHoach}"></td><td class="actions"><form th:action="@{/thu-hoach/{id}/delete(id=${item.maNhatKyThuHoach})}" method="post"><button>Xoa</button></form></td></tr></tbody>
+<main><section class="panel"><div class="panel-head"><h2>Danh sách nhật ký thu hoạch</h2><a class="btn" href="/thu-hoach/new">Thêm mới</a></div>
+    <table><thead><tr><th>Mã</th><th>Khu vực</th><th>Số lượng</th><th>Đã bán</th><th>Ngày</th><th></th></tr></thead>
+        <tbody><tr th:each="item:${items}"><td th:text="${item.maNhatKyThuHoach}"></td><td th:text="${item.khuVuc != null ? item.khuVuc.tenKhuVuc : ''}"></td><td th:text="${item.soLuongThuHoach}"></td><td th:text="${item.soLuongDaBan}"></td><td th:text="${item.ngayThuHoach}"></td><td class="actions"><form th:action="@{/thu-hoach/{id}/delete(id=${item.maNhatKyThuHoach})}" method="post"><button>Xóa</button></form></td></tr></tbody>
     </table>
 </section></main>
 </body>

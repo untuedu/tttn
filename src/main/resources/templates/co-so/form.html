@@ -7,10 +7,10 @@
         <p class="error" th:if="${error}" th:text="${error}"></p>
         <form method="post" action="/co-so" th:object="${item}" class="entity-form">
             <input type="hidden" th:field="*{maCoSoNuoiTrong}">
-            <label>Dien tich</label><input type="number" step="0.1" th:field="*{dienTich}" required>
-            <label>Dien tich da su dung</label><input type="number" step="0.1" th:field="*{dienTichDaSuDung}" required>
-            <label>Dia chi</label><input th:field="*{diaChi}" required>
-            <div class="form-actions"><a href="/co-so">Quay lai</a><button type="submit">Luu</button></div>
+            <label>Diện tích</label><input type="number" step="0.1" th:field="*{dienTich}" required>
+            <label>Diện tích đã sử dụng</label><input type="number" step="0.1" th:field="*{dienTichDaSuDung}" required>
+            <label>Địa chỉ</label><input th:field="*{diaChi}" required>
+            <div class="form-actions"><a href="/co-so">Quay lại</a><button type="submit">Lưu</button></div>
         </form>
     </section>
 </main>

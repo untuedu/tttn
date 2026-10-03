@@ -39,32 +39,32 @@ public class DataSeeder implements CommandLineRunner {
             return;
         }
 
-        CoSoNuoiTrong cs1 = coSo(1800, 900, "Doi 1, xa Vat Lai, Ha Noi");
-        CoSoNuoiTrong cs2 = coSo(2600, 1200, "Doi 2, xa Vat Lai, Ha Noi");
-        CoSoNuoiTrong cs3 = coSo(3000, 1700, "Doi 3, xa Vat Lai, Ha Noi");
+        CoSoNuoiTrong cs1 = coSo(1800, 900, "Đội 1, xã Vật Lại, Hà Nội");
+        CoSoNuoiTrong cs2 = coSo(2600, 1200, "Đội 2, xã Vật Lại, Hà Nội");
+        CoSoNuoiTrong cs3 = coSo(3000, 1700, "Đội 3, xã Vật Lại, Hà Nội");
         coSoRepo.save(cs1);
         coSoRepo.save(cs2);
         coSoRepo.save(cs3);
 
-        KhoVatTu khoChinh = khoRepo.save(kho("Kho vat tu chinh"));
-        KhoVatTu khoKho = khoRepo.save(kho("Kho kho"));
+        KhoVatTu khoChinh = khoRepo.save(kho("Kho vật tư chính"));
+        KhoVatTu khoKho = khoRepo.save(kho("Kho khô"));
 
-        LoaiVatTu tieuHao = loaiRepo.save(loai("Vat pham tieu hao"));
-        LoaiVatTu khongTieuHao = loaiRepo.save(loai("Vat tu khong tieu hao"));
+        LoaiVatTu tieuHao = loaiRepo.save(loai("Vật phẩm tiêu hao"));
+        LoaiVatTu khongTieuHao = loaiRepo.save(loai("Vật tư không tiêu hao"));
 
-        NguoiDung admin = nguoiDung("Quan tri HTX", "admin@htx.vn", "123456", Role.ADMIN, cs1);
-        NguoiDung quanLy = nguoiDung("Nguyen Tuan Dat", "dat@htx.vn", "123456", Role.QUAN_LY_HTX, cs2);
+        NguoiDung admin = nguoiDung("Quản trị HTX", "admin@htx.vn", "123456", Role.ADMIN, cs1);
+        NguoiDung quanLy = nguoiDung("Nguyễn Tuấn Đạt", "dat@htx.vn", "123456", Role.QUAN_LY_HTX, cs2);
         nguoiDungRepo.save(admin);
         nguoiDungRepo.save(quanLy);
 
-        KhuVuc kv1 = khuVuc("Ao so 1", 600, "Ca ro phi", admin, cs1);
-        KhuVuc kv2 = khuVuc("Lo rau A", 450, "Rau cai", quanLy, cs2);
+        KhuVuc kv1 = khuVuc("Ao số 1", 600, "Cá rô phi", admin, cs1);
+        KhuVuc kv2 = khuVuc("Lô rau A", 450, "Rau cải", quanLy, cs2);
         khuVucRepo.save(kv1);
         khuVucRepo.save(kv2);
 
         NhatKyMuaSam ms = new NhatKyMuaSam();
-        ms.setTenVatTu("Phan huu co");
-        ms.setXuatXu("Viet Nam");
+        ms.setTenVatTu("Phân hữu cơ");
+        ms.setXuatXu("Việt Nam");
         ms.setSoLuong(120);
         ms.setGia(85000);
         ms.setNgayMua(LocalDate.now().minusDays(12));
@@ -74,7 +74,7 @@ public class DataSeeder implements CommandLineRunner {
         muaSamRepo.save(ms);
 
         NhatKySanXuat sx = new NhatKySanXuat();
-        sx.setTenVatTu("Phan huu co");
+        sx.setTenVatTu("Phân hữu cơ");
         sx.setSoLuongSuDung(20);
         sx.setNgaySuDung(LocalDate.now().minusDays(5));
         sx.setKhoVatTu(khoChinh);

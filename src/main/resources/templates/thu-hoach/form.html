@@ -3,11 +3,11 @@
 <body th:replace="~{fragments/layout :: shell(~{::main})}">
 <main><section class="panel form-panel"><div class="panel-head"><h2 th:text="${title}">Form</h2></div>
     <form method="post" action="/thu-hoach" th:object="${item}" class="entity-form">
-        <label>Khu vuc</label><select name="khuVucId" required><option th:each="kv:${khuVucs}" th:value="${kv.maKhuVuc}" th:text="${kv.tenKhuVuc}"></option></select>
-        <label>So luong thu hoach</label><input type="number" th:field="*{soLuongThuHoach}" required>
-        <label>So luong da ban</label><input type="number" th:field="*{soLuongDaBan}">
-        <label>Ngay thu hoach</label><input type="date" th:field="*{ngayThuHoach}">
-        <div class="form-actions"><a href="/thu-hoach">Quay lai</a><button type="submit">Luu</button></div>
+        <label>Khu vực</label><select name="khuVucId" required><option th:each="kv:${khuVucs}" th:value="${kv.maKhuVuc}" th:text="${kv.tenKhuVuc}"></option></select>
+        <label>Số lượng thu hoạch</label><input type="number" th:field="*{soLuongThuHoach}" required>
+        <label>Số lượng đã bán</label><input type="number" th:field="*{soLuongDaBan}">
+        <label>Ngày thu hoạch</label><input type="date" th:field="*{ngayThuHoach}">
+        <div class="form-actions"><a href="/thu-hoach">Quay lại</a><button type="submit">Lưu</button></div>
     </form>
 </section></main>
 </body>

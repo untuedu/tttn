@@ -10,25 +10,25 @@
 <aside class="sidebar">
     <div class="brand">
         <span class="brand-mark">HTX</span>
-        <span>Quan ly nong nghiep</span>
+        <span>Quản lý nông nghiệp</span>
     </div>
     <nav>
-        <a th:classappend="${active == 'dashboard'} ? 'active'" href="/">Thong ke</a>
-        <a th:classappend="${active == 'co-so'} ? 'active'" href="/co-so">Co so nuoi trong</a>
-        <a th:classappend="${active == 'khu-vuc'} ? 'active'" href="/khu-vuc">Khu vuc</a>
-        <a th:classappend="${active == 'kho'} ? 'active'" href="/kho-vat-tu">Kho vat tu</a>
-        <a th:classappend="${active == 'mua-sam'} ? 'active'" href="/mua-sam">Nhat ky mua sam</a>
-        <a th:classappend="${active == 'san-xuat'} ? 'active'" href="/san-xuat">Nhat ky san xuat</a>
-        <a th:classappend="${active == 'thu-hoach'} ? 'active'" href="/thu-hoach">Nhat ky thu hoach</a>
-        <a th:classappend="${active == 'ban'} ? 'active'" href="/ban-san-pham">Ban san pham</a>
+        <a th:classappend="${active == 'dashboard'} ? 'active'" href="/">Thống kê</a>
+        <a th:classappend="${active == 'co-so'} ? 'active'" href="/co-so">Cơ sở nuôi trồng</a>
+        <a th:classappend="${active == 'khu-vuc'} ? 'active'" href="/khu-vuc">Khu vực</a>
+        <a th:classappend="${active == 'kho'} ? 'active'" href="/kho-vat-tu">Kho vật tư</a>
+        <a th:classappend="${active == 'mua-sam'} ? 'active'" href="/mua-sam">Nhật ký mua sắm</a>
+        <a th:classappend="${active == 'san-xuat'} ? 'active'" href="/san-xuat">Nhật ký sản xuất</a>
+        <a th:classappend="${active == 'thu-hoach'} ? 'active'" href="/thu-hoach">Nhật ký thu hoạch</a>
+        <a th:classappend="${active == 'ban'} ? 'active'" href="/ban-san-pham">Bán sản phẩm</a>
     </nav>
 </aside>
 <div class="app">
     <header class="topbar">
-        <h1 th:text="${title}">Trang quan ly</h1>
+        <h1 th:text="${title}">Trang quản lý</h1>
         <div class="userbar">
-            <span th:text="${session.user != null ? session.user.tenNguoiDung : 'Nguoi dung'}">Nguoi dung</span>
-            <a href="/logout">Dang xuat</a>
+            <span th:text="${session.user != null ? session.user.tenNguoiDung : 'Người dùng'}">Người dùng</span>
+            <a href="/logout">Đăng xuất</a>
         </div>
     </header>
     <main th:replace="${content}"></main>
@@ -36,13 +36,13 @@
 <section class="chatbot">
     <button id="chatToggle" class="chat-toggle" type="button">AI</button>
     <div id="chatPanel" class="chat-panel">
-        <div class="chat-head">Tro ly HTX</div>
+        <div class="chat-head">Trợ lý HTX</div>
         <div id="chatMessages" class="chat-messages">
-            <div class="bot">Xin chao, ban can ho tro ve san xuat, vat tu hay thu hoach?</div>
+            <div class="bot">Xin chào, bạn cần hỗ trợ về sản xuất, vật tư hay thu hoạch?</div>
         </div>
         <form id="chatForm" class="chat-form">
-            <input id="chatInput" autocomplete="off" placeholder="Nhap cau hoi...">
-            <button type="submit">Gui</button>
+            <input id="chatInput" autocomplete="off" placeholder="Nhập câu hỏi...">
+            <button type="submit">Gửi</button>
         </form>
     </div>
 </section>
