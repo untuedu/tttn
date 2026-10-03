@@ -29,7 +29,7 @@ public class AuthController {
                     return "redirect:/";
                 })
                 .orElseGet(() -> {
-                    model.addAttribute("error", "Email hoac mat khau khong dung");
+                    model.addAttribute("error", "Email hoặc mật khẩu không đúng");
                     return "login";
                 });
     }

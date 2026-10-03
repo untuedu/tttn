@@ -3,12 +3,12 @@
 <body th:replace="~{fragments/layout :: shell(~{::main})}">
 <main><section class="panel form-panel"><div class="panel-head"><h2 th:text="${title}">Form</h2></div>
     <form method="post" action="/san-xuat" th:object="${item}" class="entity-form">
-        <label>Ten vat tu</label><input th:field="*{tenVatTu}" required>
-        <label>So luong su dung</label><input type="number" th:field="*{soLuongSuDung}" required>
-        <label>Ngay su dung</label><input type="date" th:field="*{ngaySuDung}">
-        <label>Kho vat tu</label><select name="khoId" required><option th:each="k:${khos}" th:value="${k.maKhoVatTu}" th:text="${k.tenKho}"></option></select>
-        <label>Khu vuc</label><select name="khuVucId" required><option th:each="kv:${khuVucs}" th:value="${kv.maKhuVuc}" th:text="${kv.tenKhuVuc}"></option></select>
-        <div class="form-actions"><a href="/san-xuat">Quay lai</a><button type="submit">Luu</button></div>
+        <label>Tên vật tư</label><input th:field="*{tenVatTu}" required>
+        <label>Số lượng sử dụng</label><input type="number" th:field="*{soLuongSuDung}" required>
+        <label>Ngày sử dụng</label><input type="date" th:field="*{ngaySuDung}">
+        <label>Kho vật tư</label><select name="khoId" required><option th:each="k:${khos}" th:value="${k.maKhoVatTu}" th:text="${k.tenKho}"></option></select>
+        <label>Khu vực</label><select name="khuVucId" required><option th:each="kv:${khuVucs}" th:value="${kv.maKhuVuc}" th:text="${kv.tenKhuVuc}"></option></select>
+        <div class="form-actions"><a href="/san-xuat">Quay lại</a><button type="submit">Lưu</button></div>
     </form>
 </section></main>
 </body>

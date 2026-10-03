@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="vi" xmlns:th="http://www.thymeleaf.org">
 <body th:replace="~{fragments/layout :: shell(~{::main})}">
-<main><section class="panel"><div class="panel-head"><h2>Danh sach nhat ky san xuat</h2><a class="btn" href="/san-xuat/new">Them moi</a></div>
-    <table><thead><tr><th>Vat tu</th><th>So luong su dung</th><th>Ngay</th><th>Kho</th><th>Khu vuc</th><th></th></tr></thead>
-        <tbody><tr th:each="item:${items}"><td th:text="${item.tenVatTu}"></td><td th:text="${item.soLuongSuDung}"></td><td th:text="${item.ngaySuDung}"></td><td th:text="${item.khoVatTu != null ? item.khoVatTu.tenKho : ''}"></td><td th:text="${item.khuVuc != null ? item.khuVuc.tenKhuVuc : ''}"></td><td class="actions"><form th:action="@{/san-xuat/{id}/delete(id=${item.maNhatKySanXuat})}" method="post"><button>Xoa</button></form></td></tr></tbody>
+<main><section class="panel"><div class="panel-head"><h2>Danh sách nhật ký sản xuất</h2><a class="btn" href="/san-xuat/new">Thêm mới</a></div>
+    <table><thead><tr><th>Vật tư</th><th>Số lượng sử dụng</th><th>Ngày</th><th>Kho</th><th>Khu vực</th><th></th></tr></thead>
+        <tbody><tr th:each="item:${items}"><td th:text="${item.tenVatTu}"></td><td th:text="${item.soLuongSuDung}"></td><td th:text="${item.ngaySuDung}"></td><td th:text="${item.khoVatTu != null ? item.khoVatTu.tenKho : ''}"></td><td th:text="${item.khuVuc != null ? item.khuVuc.tenKhuVuc : ''}"></td><td class="actions"><form th:action="@{/san-xuat/{id}/delete(id=${item.maNhatKySanXuat})}" method="post"><button>Xóa</button></form></td></tr></tbody>
     </table>
 </section></main>
 </body>

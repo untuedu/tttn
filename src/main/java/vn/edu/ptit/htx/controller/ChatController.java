@@ -41,57 +41,57 @@ public class ChatController {
     private String fallback(String message) {
         String text = normalize(message);
         if (containsAny(text, "dang nhap", "login", "tai khoan", "mat khau")) {
-            return "Dang nhap bang email va mat khau. Tai khoan demo: admin@htx.vn / 123456 hoac dat@htx.vn / 123456. Phien ban hien tai chua co tu cap lai mat khau.";
+            return "Đăng nhập bằng email và mật khẩu. Tài khoản demo: admin@htx.vn / 123456 hoặc dat@htx.vn / 123456. Phiên bản hiện tại chưa có chức năng tự cấp lại mật khẩu.";
         }
         if (containsAny(text, "dashboard", "thong ke", "doanh thu", "chi phi", "bieu do")) {
-            return "Dashboard hien so co so, kho, khu vuc, tong doanh thu, tong chi phi mua sam va bieu do cot tong quan.";
+            return "Dashboard hiển thị số cơ sở, kho, khu vực, tổng doanh thu, tổng chi phí mua sắm và biểu đồ cột tổng quan.";
         }
         if (containsAny(text, "co so nuoi trong", "them co so", "dia chi co so", "dien tich")) {
-            return "Vao Co so nuoi trong de them, sua, xoa co so. Khi them moi, he thong kiem tra dia chi khong bi trung lap.";
+            return "Vào Cơ sở nuôi trồng để thêm, sửa, xóa cơ sở. Khi thêm mới, hệ thống kiểm tra địa chỉ không bị trùng lặp.";
         }
         if (containsAny(text, "khu vuc", "nguoi quan ly", "san pham khu vuc")) {
-            return "Vao Khu vuc de gan khu vuc voi co so, nguoi quan ly va san pham. Phien ban hien tai chi luu duong dan hinh anh, chua upload tep.";
+            return "Vào Khu vực để gán khu vực với cơ sở, người quản lý và sản phẩm. Phiên bản hiện tại chỉ lưu đường dẫn hình ảnh, chưa upload tệp.";
         }
         if (containsAny(text, "kho vat tu", "them kho", "ten kho", "vat tu", "han su dung")) {
-            return "Vao Kho vat tu hoac Nhat ky mua sam de theo doi ten vat tu, xuat xu, so luong, gia, han su dung va trang thai. Ten kho trung se bi tu choi khi tao moi.";
+            return "Vào Kho vật tư hoặc Nhật ký mua sắm để theo dõi tên vật tư, xuất xứ, số lượng, giá, hạn sử dụng và trạng thái. Tên kho trùng sẽ bị từ chối khi tạo mới.";
         }
         if (containsAny(text, "nhat ky mua sam", "mua vat tu", "nhap kho", "phieu mua")) {
-            return "Nhat ky mua sam ghi nhan vat tu, xuat xu, so luong, gia, ngay mua, ngay san xuat, han su dung, loai vat tu, kho va nguoi mua.";
+            return "Nhật ký mua sắm ghi nhận vật tư, xuất xứ, số lượng, giá, ngày mua, ngày sản xuất, hạn sử dụng, loại vật tư, kho và người mua.";
         }
         if (containsAny(text, "nhat ky san xuat", "su dung vat tu", "bon phan", "phun thuoc", "canh tac")) {
-            return "Nhat ky san xuat ghi nhan vat tu da dung, so luong, ngay su dung, kho xuat va khu vuc ap dung de phuc vu truy xuat.";
+            return "Nhật ký sản xuất ghi nhận vật tư đã dùng, số lượng, ngày sử dụng, kho xuất và khu vực áp dụng để phục vụ truy xuất.";
         }
         if (containsAny(text, "thu hoach", "san luong thu hoach", "ngay thu hoach")) {
-            return "Hay tao nhat ky thu hoach theo khu vuc, nhap san luong, so luong da ban neu co va ngay thu hoach truoc khi tao phieu ban san pham.";
+            return "Hãy tạo nhật ký thu hoạch theo khu vực, nhập sản lượng, số lượng đã bán nếu có và ngày thu hoạch trước khi tạo phiếu bán sản phẩm.";
         }
         if (containsAny(text, "ban san pham", "ban hang", "gia ban", "phieu ban", "ban vuot")) {
-            return "Chon dot thu hoach, nhap so luong ban, gia ban va ngay ban. He thong kiem tra so luong ban so voi so luong con lai dang luu tren dot thu hoach.";
+            return "Chọn đợt thu hoạch, nhập số lượng bán, giá bán và ngày bán. Hệ thống kiểm tra số lượng bán so với số lượng còn lại đang lưu trên đợt thu hoạch.";
         }
         if (containsAny(text, "ma qr", "qr code", "tao qr", "quet qr", "truy xuat")) {
-            return "Moi nhat ky ban moi tu sinh QR dang HTX-BAN-ID-THUHOACH-ID. QR dung de doi chieu giao dich va dot thu hoach; trang truy xuat cong khai chua duoc trien khai.";
+            return "Mỗi nhật ký bán mới tự sinh QR dạng HTX-BAN-ID-THUHOACH-ID. QR dùng để đối chiếu giao dịch và đợt thu hoạch; trang truy xuất công khai chưa được triển khai.";
         }
         if (containsAny(text, "sau benh", "sau hai", "trieu chung", "vang la", "cay bi benh")) {
-            return "Hay ghi nhan trieu chung, khu vuc, thoi diem phat hien va vat tu da xu ly trong nhat ky san xuat. Chatbot khong thay the can bo ky thuat hay chan doan chuyen mon.";
+            return "Hãy ghi nhận triệu chứng, khu vực, thời điểm phát hiện và vật tư đã xử lý trong nhật ký sản xuất. Chatbot không thay thế cán bộ kỹ thuật hay chẩn đoán chuyên môn.";
         }
         if (containsAny(text, "phan bon", "thuoc bao ve", "thuoc bvtv", "lieu dung")) {
-            return "He thong ho tro ghi nhan vat tu da su dung, khong ke don hay dua lieu dung. Hay tuan thu nhan, quy trinh ky thuat va huong dan chuyen mon.";
+            return "Hệ thống hỗ trợ ghi nhận vật tư đã sử dụng, không kê đơn hay đưa liều dùng. Hãy tuân thủ nhãn, quy trình kỹ thuật và hướng dẫn chuyên môn.";
         }
         if (containsAny(text, "h2", "database", "csdl", "luu du lieu", "mat du lieu")) {
-            return "Phien ban demo dung H2 trong bo nho va create-drop, nen du lieu se duoc tao lai khi dung ung dung. H2 Console nam tai /h2-console khi app dang chay.";
+            return "Phiên bản demo dùng H2 trong bộ nhớ và create-drop, nên dữ liệu sẽ được tạo lại khi dừng ứng dụng. H2 Console nằm tại /h2-console khi ứng dụng đang chạy.";
         }
         if (containsAny(text, "phan quyen", "vai tro", "admin", "quan ly htx", "thanh vien")) {
-            return "Du lieu co vai tro ADMIN, QUAN_LY_HTX va THANH_VIEN, nhung phan quyen chi tiet tren tung man hinh chua duoc ap dung.";
+            return "Dữ liệu có vai trò ADMIN, QUAN_LY_HTX và THANH_VIEN, nhưng phân quyền chi tiết trên từng màn hình chưa được áp dụng.";
         }
         if (containsAny(text, "sua nhat ky", "cap nhat nhat ky", "xoa nhat ky")) {
-            return "Nhat ky mua sam, san xuat, thu hoach va ban san pham hien ho tro them, xem danh sach va xoa; chuc nang sua chua duoc trien khai.";
+            return "Nhật ký mua sắm, sản xuất, thu hoạch và bán sản phẩm hiện hỗ trợ thêm, xem danh sách và xóa; chức năng sửa chưa được triển khai.";
         }
         if (containsAny(text, "chatbot", "fastapi", "llm", "rag")) {
-            return "Chatbot hien dung FastAPI nhe, FAQ va tu khoa. Neu dich vu Python chua chay, backend Java se tra loi bang FAQ fallback.";
+            return "Chatbot hiện dùng FastAPI nhẹ, FAQ và từ khóa. Nếu dịch vụ Python chưa chạy, backend Java sẽ trả lời bằng FAQ dự phòng.";
         }
         if (containsAny(text, "cong nghe", "spring boot", "thymeleaf", "java", "python")) {
-            return "Ung dung dung Java 21, Spring Boot 4.1.1, Thymeleaf, Spring Data JPA, H2, Chart.js, ZXing va FastAPI tuy chon.";
+            return "Ứng dụng dùng Java 21, Spring Boot 4.1.1, Thymeleaf, Spring Data JPA, H2, Chart.js, ZXing và FastAPI tùy chọn.";
         }
-        return "Toi co the ho tro ve dang nhap, dashboard, co so, khu vuc, kho vat tu, nhat ky mua sam, san xuat, thu hoach, ban san pham, QR va chatbot.";
+        return "Tôi có thể hỗ trợ về đăng nhập, dashboard, cơ sở, khu vực, kho vật tư, nhật ký mua sắm, sản xuất, thu hoạch, bán sản phẩm, QR và chatbot.";
     }
 
     private boolean containsAny(String text, String... keywords) {

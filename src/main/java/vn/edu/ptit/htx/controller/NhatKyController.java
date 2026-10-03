@@ -34,14 +34,14 @@ public class NhatKyController {
     @GetMapping("/mua-sam")
     public String muaSam(Model model) {
         model.addAttribute("items", muaSamRepo.findAll());
-        model.addAttribute("title", "Danh sach nhat ky mua sam");
+        model.addAttribute("title", "Danh sách nhật ký mua sắm");
         model.addAttribute("active", "mua-sam");
         return "mua-sam/list";
     }
 
     @GetMapping("/mua-sam/new")
     public String muaSamCreate(Model model) {
-        formRefs(model, "Them moi nhat ky mua sam", "mua-sam");
+        formRefs(model, "Thêm mới nhật ký mua sắm", "mua-sam");
         model.addAttribute("item", new NhatKyMuaSam());
         return "mua-sam/form";
     }
@@ -65,14 +65,14 @@ public class NhatKyController {
     @GetMapping("/san-xuat")
     public String sanXuat(Model model) {
         model.addAttribute("items", sanXuatRepo.findAll());
-        model.addAttribute("title", "Danh sach nhat ky san xuat");
+        model.addAttribute("title", "Danh sách nhật ký sản xuất");
         model.addAttribute("active", "san-xuat");
         return "san-xuat/list";
     }
 
     @GetMapping("/san-xuat/new")
     public String sanXuatCreate(Model model) {
-        formRefs(model, "Them moi nhat ky san xuat", "san-xuat");
+        formRefs(model, "Thêm mới nhật ký sản xuất", "san-xuat");
         model.addAttribute("item", new NhatKySanXuat());
         return "san-xuat/form";
     }
@@ -94,14 +94,14 @@ public class NhatKyController {
     @GetMapping("/thu-hoach")
     public String thuHoach(Model model) {
         model.addAttribute("items", thuHoachRepo.findAll());
-        model.addAttribute("title", "Danh sach nhat ky thu hoach");
+        model.addAttribute("title", "Danh sách nhật ký thu hoạch");
         model.addAttribute("active", "thu-hoach");
         return "thu-hoach/list";
     }
 
     @GetMapping("/thu-hoach/new")
     public String thuHoachCreate(Model model) {
-        formRefs(model, "Them moi nhat ky thu hoach", "thu-hoach");
+        formRefs(model, "Thêm mới nhật ký thu hoạch", "thu-hoach");
         model.addAttribute("item", new NhatKyThuHoach());
         return "thu-hoach/form";
     }
@@ -122,14 +122,14 @@ public class NhatKyController {
     @GetMapping("/ban-san-pham")
     public String ban(Model model) {
         model.addAttribute("items", banRepo.findAll());
-        model.addAttribute("title", "Danh sach nhat ky ban san pham");
+        model.addAttribute("title", "Danh sách nhật ký bán sản phẩm");
         model.addAttribute("active", "ban");
         return "ban/list";
     }
 
     @GetMapping("/ban-san-pham/new")
     public String banCreate(Model model) {
-        formRefs(model, "Them moi nhat ky ban san pham", "ban");
+        formRefs(model, "Thêm mới nhật ký bán sản phẩm", "ban");
         model.addAttribute("item", new NhatKyBanSanPham());
         return "ban/form";
     }
@@ -138,9 +138,9 @@ public class NhatKyController {
     public String banSave(@ModelAttribute NhatKyBanSanPham item, @RequestParam Integer thuHoachId, Model model) {
         NhatKyThuHoach thuHoach = thuHoachRepo.findById(thuHoachId).orElse(null);
         if (thuHoach != null && item.getSoLuong() > (thuHoach.getSoLuongThuHoach() - thuHoach.getSoLuongDaBan())) {
-            formRefs(model, "Them moi nhat ky ban san pham", "ban");
+            formRefs(model, "Thêm mới nhật ký bán sản phẩm", "ban");
             model.addAttribute("item", item);
-            model.addAttribute("error", "Them moi that bai, do so luong ban lon hon so luong trong kho");
+            model.addAttribute("error", "Thêm mới thất bại, do số lượng bán lớn hơn số lượng trong kho");
             return "ban/form";
         }
         item.setNhatKyThuHoach(thuHoach);

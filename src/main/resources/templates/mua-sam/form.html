@@ -3,18 +3,18 @@
 <body th:replace="~{fragments/layout :: shell(~{::main})}">
 <main><section class="panel form-panel"><div class="panel-head"><h2 th:text="${title}">Form</h2></div>
     <form method="post" action="/mua-sam" th:object="${item}" class="entity-form two-col">
-        <label>Ten vat tu</label><input th:field="*{tenVatTu}" required>
-        <label>Xuat xu</label><input th:field="*{xuatXu}">
-        <label>So luong</label><input type="number" th:field="*{soLuong}" required>
-        <label>Gia</label><input type="number" step="1000" th:field="*{gia}" required>
-        <label>Ngay mua</label><input type="date" th:field="*{ngayMua}">
-        <label>Ngay san xuat</label><input type="date" th:field="*{ngaySanXuat}">
-        <label>Han su dung</label><input type="date" th:field="*{hanSuDung}">
-        <label>Trang thai</label><input th:field="*{trangThai}">
-        <label>Loai vat tu</label><select name="loaiId" required><option th:each="l:${loais}" th:value="${l.maLoai}" th:text="${l.tenLoai}"></option></select>
-        <label>Kho vat tu</label><select name="khoId" required><option th:each="k:${khos}" th:value="${k.maKhoVatTu}" th:text="${k.tenKho}"></option></select>
-        <label>Nguoi mua</label><select name="nguoiDungId" required><option th:each="u:${nguoiDungs}" th:value="${u.maNguoiDung}" th:text="${u.tenNguoiDung}"></option></select>
-        <div class="form-actions full"><a href="/mua-sam">Quay lai</a><button type="submit">Luu</button></div>
+        <label>Tên vật tư</label><input th:field="*{tenVatTu}" required>
+        <label>Xuất xứ</label><input th:field="*{xuatXu}">
+        <label>Số lượng</label><input type="number" th:field="*{soLuong}" required>
+        <label>Giá</label><input type="number" step="1000" th:field="*{gia}" required>
+        <label>Ngày mua</label><input type="date" th:field="*{ngayMua}">
+        <label>Ngày sản xuất</label><input type="date" th:field="*{ngaySanXuat}">
+        <label>Hạn sử dụng</label><input type="date" th:field="*{hanSuDung}">
+        <label>Trạng thái</label><input th:field="*{trangThai}">
+        <label>Loại vật tư</label><select name="loaiId" required><option th:each="l:${loais}" th:value="${l.maLoai}" th:text="${l.tenLoai}"></option></select>
+        <label>Kho vật tư</label><select name="khoId" required><option th:each="k:${khos}" th:value="${k.maKhoVatTu}" th:text="${k.tenKho}"></option></select>
+        <label>Người mua</label><select name="nguoiDungId" required><option th:each="u:${nguoiDungs}" th:value="${u.maNguoiDung}" th:text="${u.tenNguoiDung}"></option></select>
+        <div class="form-actions full"><a href="/mua-sam">Quay lại</a><button type="submit">Lưu</button></div>
     </form>
 </section></main>
 </body>

@@ -3,13 +3,13 @@
 <body th:replace="~{fragments/layout :: shell(~{::main})}">
 <main>
     <section class="panel">
-        <div class="panel-head"><h2>Danh sach kho vat tu</h2><a class="btn" href="/kho-vat-tu/new">Them moi</a></div>
+        <div class="panel-head"><h2>Danh sách kho vật tư</h2><a class="btn" href="/kho-vat-tu/new">Thêm mới</a></div>
         <table>
-            <thead><tr><th>Ma</th><th>Ten kho</th><th>Ghi chu</th><th></th></tr></thead>
+            <thead><tr><th>Mã</th><th>Tên kho</th><th>Ghi chú</th><th></th></tr></thead>
             <tbody>
             <tr th:each="item : ${items}">
                 <td th:text="${item.maKhoVatTu}"></td><td th:text="${item.tenKho}"></td>
-                <td class="actions"><a th:href="@{/kho-vat-tu/{id}/edit(id=${item.maKhoVatTu})}">Sua</a><form th:action="@{/kho-vat-tu/{id}/delete(id=${item.maKhoVatTu})}" method="post"><button>Xoa</button></form></td>
+                <td class="actions"><a th:href="@{/kho-vat-tu/{id}/edit(id=${item.maKhoVatTu})}">Sửa</a><form th:action="@{/kho-vat-tu/{id}/delete(id=${item.maKhoVatTu})}" method="post"><button>Xóa</button></form></td>
             </tr>
             </tbody>
         </table>

@@ -3,9 +3,9 @@ if (chart && window.Chart) {
     new Chart(chart, {
         type: 'bar',
         data: {
-            labels: ['Doanh thu', 'Chi phi', 'Khu vuc'],
+            labels: ['Doanh thu', 'Chi phí', 'Khu vực'],
             datasets: [{
-                label: 'Thong ke HTX',
+                label: 'Thống kê HTX',
                 data: [Number(chart.dataset.income || 0), Number(chart.dataset.cost || 0), Number(chart.dataset.area || 0)],
                 backgroundColor: ['#1ab394', '#f8ac59', '#23c6c8']
             }]

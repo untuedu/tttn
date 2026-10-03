@@ -23,20 +23,20 @@ public class KhuVucController {
     @GetMapping
     public String list(Model model) {
         model.addAttribute("items", repo.findAll());
-        model.addAttribute("title", "Danh sach khu vuc nuoi trong");
+        model.addAttribute("title", "Danh sách khu vực nuôi trồng");
         model.addAttribute("active", "khu-vuc");
         return "khu-vuc/list";
     }
 
     @GetMapping("/new")
     public String create(Model model) {
-        addFormData(model, new KhuVuc(), "Them moi khu vuc nuoi trong");
+        addFormData(model, new KhuVuc(), "Thêm mới khu vực nuôi trồng");
         return "khu-vuc/form";
     }
 
     @GetMapping("/{id}/edit")
     public String edit(@PathVariable Integer id, Model model) {
-        addFormData(model, repo.findById(id).orElseThrow(), "Cap nhat khu vuc nuoi trong");
+        addFormData(model, repo.findById(id).orElseThrow(), "Cập nhật khu vực nuôi trồng");
         return "khu-vuc/form";
     }
 

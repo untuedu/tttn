@@ -3,13 +3,13 @@
 <body th:replace="~{fragments/layout :: shell(~{::main})}">
 <main>
     <section class="panel">
-        <div class="panel-head"><h2>Danh sach khu vuc nuoi trong</h2><a class="btn" href="/khu-vuc/new">Them moi</a></div>
+        <div class="panel-head"><h2>Danh sách khu vực nuôi trồng</h2><a class="btn" href="/khu-vuc/new">Thêm mới</a></div>
         <table>
-            <thead><tr><th>Ma</th><th>Ten khu vuc</th><th>Dien tich</th><th>San pham</th><th>Quan ly</th><th>Co so</th><th></th></tr></thead>
+            <thead><tr><th>Mã</th><th>Tên khu vực</th><th>Diện tích</th><th>Sản phẩm</th><th>Quản lý</th><th>Cơ sở</th><th></th></tr></thead>
             <tbody><tr th:each="item : ${items}">
                 <td th:text="${item.maKhuVuc}"></td><td th:text="${item.tenKhuVuc}"></td><td th:text="${item.dienTich}"></td><td th:text="${item.sanPham}"></td>
                 <td th:text="${item.nguoiDung != null ? item.nguoiDung.tenNguoiDung : ''}"></td><td th:text="${item.coSoNuoiTrong != null ? item.coSoNuoiTrong.diaChi : ''}"></td>
-                <td class="actions"><a th:href="@{/khu-vuc/{id}/edit(id=${item.maKhuVuc})}">Sua</a><form th:action="@{/khu-vuc/{id}/delete(id=${item.maKhuVuc})}" method="post"><button>Xoa</button></form></td>
+                <td class="actions"><a th:href="@{/khu-vuc/{id}/edit(id=${item.maKhuVuc})}">Sửa</a><form th:action="@{/khu-vuc/{id}/delete(id=${item.maKhuVuc})}" method="post"><button>Xóa</button></form></td>
             </tr></tbody>
         </table>
     </section>

@@ -31,7 +31,7 @@ public class DashboardController {
         model.addAttribute("khuVucCount", khuVucRepo.count());
         model.addAttribute("doanhThu", doanhThu);
         model.addAttribute("chiPhi", chiPhi);
-        model.addAttribute("title", "Trang thong ke");
+        model.addAttribute("title", "Trang thống kê");
         model.addAttribute("active", "dashboard");
         return "dashboard";
     }

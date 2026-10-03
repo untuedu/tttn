@@ -18,7 +18,7 @@ public class KhoVatTuController {
     @GetMapping
     public String list(Model model) {
         model.addAttribute("items", repo.findAll());
-        model.addAttribute("title", "Danh sach kho vat tu");
+        model.addAttribute("title", "Danh sách kho vật tư");
         model.addAttribute("active", "kho");
         return "kho/list";
     }
@@ -26,7 +26,7 @@ public class KhoVatTuController {
     @GetMapping("/new")
     public String create(Model model) {
         model.addAttribute("item", new KhoVatTu());
-        model.addAttribute("title", "Them moi kho vat tu");
+        model.addAttribute("title", "Thêm mới kho vật tư");
         model.addAttribute("active", "kho");
         return "kho/form";
     }
@@ -34,7 +34,7 @@ public class KhoVatTuController {
     @GetMapping("/{id}/edit")
     public String edit(@PathVariable Integer id, Model model) {
         model.addAttribute("item", repo.findById(id).orElseThrow());
-        model.addAttribute("title", "Cap nhat kho vat tu");
+        model.addAttribute("title", "Cập nhật kho vật tư");
         model.addAttribute("active", "kho");
         return "kho/form";
     }
@@ -43,8 +43,8 @@ public class KhoVatTuController {
     public String save(@ModelAttribute KhoVatTu item, Model model) {
         if (item.getMaKhoVatTu() == null && repo.existsByTenKhoIgnoreCase(item.getTenKho())) {
             model.addAttribute("item", item);
-            model.addAttribute("error", "Kho vat tu da ton tai");
-            model.addAttribute("title", "Them moi kho vat tu");
+            model.addAttribute("error", "Kho vật tư đã tồn tại");
+            model.addAttribute("title", "Thêm mới kho vật tư");
             model.addAttribute("active", "kho");
             return "kho/form";
         }

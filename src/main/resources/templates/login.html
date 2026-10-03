@@ -3,19 +3,19 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Dang nhap</title>
+    <title>Đăng nhập</title>
     <link rel="stylesheet" href="/css/app.css">
 </head>
 <body class="login-page">
 <div class="login-card">
-    <div class="login-title">CHAO MUNG BAN DEN VOI HOP TAC XA TAN THANH</div>
+    <div class="login-title">CHÀO MỪNG BẠN ĐẾN VỚI HỢP TÁC XÃ TÂN THÀNH</div>
     <form method="post" action="/login">
         <label>Email</label>
         <input name="email" type="email" value="admin@htx.vn" required>
-        <label>Mat khau</label>
+        <label>Mật khẩu</label>
         <input name="matKhau" type="password" value="123456" required>
         <p class="error" th:if="${error}" th:text="${error}"></p>
-        <button type="submit">Dang nhap</button>
+        <button type="submit">Đăng nhập</button>
     </form>
 </div>
 </body>
